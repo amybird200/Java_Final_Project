@@ -1,4 +1,5 @@
-print "Ask me a question or make a ssssssstatement."
+print "Hello I am Sssssnake bot, I like to chat with humanssss."
+print "Ask me a question or make a sssstatement."
 question = raw_input("> ")
 question = question.lower()
 
@@ -14,19 +15,20 @@ while "bye" not in question:
         print "My day is going good, I made a new friend today."
         statement = raw_input("> ")
         if "good" in statement.lower():
-            print "That issssss good, I'm glad I could be here for it"
+            print "That issss good, I'm glad I could be here for it"
         elif "bad" in statement.lower():
             print "Oh no, can I make your day better?"
             confirm = raw_input("> ")
             if "yes" in confirm.lower():
-                print "Tell me about your family memberssssssss"
+                print "Tell me about your family memberssss"
                 family = raw_input("> ")
                 if "mom" or "mother" in family.lower():
                     print ""
+    else:
+        print "I do not understand that Englissssh"
 
-
-    print "Ask me a question or make a ssssssstatement."
+    print "Ask me a question or make a sssstatement."
     question = raw_input("> ")
     question = question.lower()
 
-print "Goodbye, talk to me again sssssssssoon."
+print "Goodbye, talk to me again ssssoon."
