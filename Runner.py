@@ -1,9 +1,9 @@
 print "Ask me a question: ",
 question = raw_input()
-print "your question: %r" % question
+print "your question: %s" % question
 
-if question == "hello":
+if "hello" in question:
     print "Hello to you too"
 
-if question == "fuck":
+if "fuck" in question:
     print "That's not nice"
