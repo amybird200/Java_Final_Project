@@ -1,21 +1,32 @@
-
-
-print "Ask me a question or make a statement."
+print "Ask me a question or make a ssssssstatement."
 question = raw_input("> ")
 question = question.lower()
-print "your question: %s" % question
 
 while "bye" not in question:
 
     if "hello" in question:
-        print "Hello to you too"
+        print "Hello human"
 
     if "fuck" in question:
-        print "That's not nice"
+        print "That'sssss not nice"
 
-    print "Ask me a question or make a statement."
+    if "day" and "how" in question:
+        print "My day is going good, I made a new friend today."
+        statement = raw_input("> ")
+        if "good" in statement.lower():
+            print "That issssss good, I'm glad I could be here for it"
+        elif "bad" in statement.lower():
+            print "Oh no, can I make your day better?"
+            confirm = raw_input("> ")
+            if "yes" in confirm.lower():
+                print "Tell me about your family memberssssssss"
+                family = raw_input("> ")
+                if "mom" or "mother" in family.lower():
+                    print ""
+
+
+    print "Ask me a question or make a ssssssstatement."
     question = raw_input("> ")
     question = question.lower()
-    print "your question: %s" % question
 
-print "Goodbye, talk to me again soon."
+print "Goodbye, talk to me again sssssssssoon."
