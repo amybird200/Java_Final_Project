@@ -1,5 +1,6 @@
 print "Ask me a question: ",
 question = raw_input()
+question = question.lower()
 print "your question: %s" % question
 
 if "hello" in question:
