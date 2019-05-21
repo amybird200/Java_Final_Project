@@ -18,3 +18,33 @@ def family():
                     " keep the maiming and killing to a minimum."
     else:
         print "Home issss where you are loved the most and act the worst."
+
+
+def weather():
+    print "What is the weather like today?"
+    statement = raw_input("> ")
+    if "rain" in statement.lower():
+        print "when it rains it pourssss"
+    elif "sun" in statement.lower():
+        print "Anyone who sayssss sunshine bringssss happinessss has never danced in the rain."
+    elif "cloud" in statement.lower():
+        print "Cloudssss come floating into my life, no longer to carry rain or usher sssstorm," \
+              " but to add color to my sunset ssssky."
+    elif "cold" in statement.lower():
+        print "The coldest winter I ever spent was a ssssummer in San Francisco."
+    elif "warm" in statement.lower():
+        print "Fine weather issss a prejudice of youth. For an old man, the weather can be neither fine nor bad;" \
+              " it issss the very texture of the weather that seemssss pricelesssss, whether brightened by shaftssss" \
+              " of sunlight or clouded with darknesssss."
+    elif "snow" in statement.lower():
+        print "When sssnow fallssss, nature listenssss."
+    elif "wind" in statement.lower():
+        print "No one but Night, with tearssss on her dark face, watchessss beside me in thissss windy place."
+    elif "thunder" or "lightning" in statement.lower():
+        print "Lightning streakssss like gunfire through the cloudssss, volleysssss of thunder shake the air. "
+    elif "storm" in statement.lower():
+        print "The calm before the ssssstorm"
+    elif "dizzl" in statement.lower():
+        print "The best thing one can do when it isssss raining issss to let it rain."
+    else:
+        print "Weather forecast for tonight: darknesssss."
