@@ -1,3 +1,8 @@
+import Nidhi
+import Josie
+import Ravisha
+
+
 print "Hello I am Sssssnake bot, I like to chat with humanssss."
 print "Ask me a question or make a sssstatement."
 question = raw_input("> ")
@@ -6,38 +11,25 @@ question = question.lower()
 while "bye" not in question:
 
     if "hello" in question:
-        print "Hello humanssss"
+        print "Hello human"
 
     if "fuck" in question:
         print "That'sssss not nice"
 
     if "day" and "how" in question:
-        print "My day is going good, I made a new friend today."
+        print "My day is going good, I made a new friend today. What about your day?"
         statement = raw_input("> ")
         if "good" in statement.lower():
             print "That issss good, I'm glad I could be here for it"
-        elif "bad" in statement.lower():
+        elif "bad" or "not" in statement.lower():
             print "Oh no, can I make your day better?"
             confirm = raw_input("> ")
             if "yes" in confirm.lower():
-                print "Tell me about your family memberssss"
-                family = raw_input("> ")
-                if "mom" or "mother" in family.lower():
-                    print "The apple doesn't fall far from the tree."
-                elif "dad" or "father" in family.lower():
-                    print "Like father, like sssson."
-                elif "bro" in family.lower():
-                    print "A brother may not be a friend, but a friend will always be a brother."
-                elif "sis" in family.lower():
-                    print "What greater thing is there for human soulssss than to feel that they are joined for life."
-                elif "family" in family.lower():
-                    print "Ohana meanssss family, and family meanssss no one getssss left behind."
-                else:
-                    print ""
+                Josie.family()
     else:
         print "I do not understand that Englissssh"
 
-    print "Assssk me a question or make a sssstatement."
+    print "Ask me a question or make a sssstatement."
     question = raw_input("> ")
     question = question.lower()
 
