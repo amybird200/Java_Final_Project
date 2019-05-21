@@ -23,15 +23,20 @@ while "bye" not in question:
                 print "Tell me about your family memberssss"
                 family = raw_input("> ")
                 if "mom" or "mother" in family.lower():
-                    print "The apple doesn't fall far from the tree."
+                    print "The apple doessss not fall far from the tree."
                 elif "dad" or "father" in family.lower():
-                    print "Like father, like sssson."
+                    print "Like father, like sonssss."
                 elif "bro" in family.lower():
-                    print "A brother may not be a friend, but a friend will always be a brother."
+                    print "A brother may not be a friend, but a friend will alwayssss be a brother."
                 elif "sis" in family.lower():
-                    print "What greater thing is there for human souls than to feel that they are joined for life."
+                    print "What greater thing issss there for human soulssss than to feel that they are joined " \
+                          "for life."
+                elif "bad" or "sad" in family.lower():
+                    print "Familiessss are messy. Immortal familiessss are eternally messy. Sometimessss the best we" \
+                          " can do issss to remind each other that we're related for better or for worse and try to" \
+                          " keep the maiming and killing to a minimum."
                 else:
-                    print ""
+                    print "Home issss where you are loved the most and act the worst."
     else:
         print "I do not understand that Englissssh"
 
