@@ -6,7 +6,7 @@ question = question.lower()
 while "bye" not in question:
 
     if "hello" in question:
-        print "Hello human"
+        print "Hello humanssss"
 
     if "fuck" in question:
         print "That'sssss not nice"
