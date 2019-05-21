@@ -1,3 +1,8 @@
+import Nidhi
+import Josie
+import Ravisha
+
+
 print "Hello I am Sssssnake bot, I like to chat with humanssss."
 print "Ask me a question or make a sssstatement."
 question = raw_input("> ")
@@ -12,31 +17,15 @@ while "bye" not in question:
         print "That'sssss not nice"
 
     if "day" and "how" in question:
-        print "My day is going good, I made a new friend today."
+        print "My day is going good, I made a new friend today. What about your day?"
         statement = raw_input("> ")
         if "good" in statement.lower():
             print "That issss good, I'm glad I could be here for it"
-        elif "bad" in statement.lower():
+        elif "bad" or "not" in statement.lower():
             print "Oh no, can I make your day better?"
             confirm = raw_input("> ")
             if "yes" in confirm.lower():
-                print "Tell me about your family memberssss"
-                family = raw_input("> ")
-                if "mom" or "mother" in family.lower():
-                    print "The apple doessss not fall far from the tree."
-                elif "dad" or "father" in family.lower():
-                    print "Like father, like sonssss."
-                elif "bro" in family.lower():
-                    print "A brother may not be a friend, but a friend will alwayssss be a brother."
-                elif "sis" in family.lower():
-                    print "What greater thing issss there for human soulssss than to feel that they are joined " \
-                          "for life."
-                elif "bad" or "sad" in family.lower():
-                    print "Familiessss are messy. Immortal familiessss are eternally messy. Sometimessss the best we" \
-                          " can do issss to remind each other that we're related for better or for worse and try to" \
-                          " keep the maiming and killing to a minimum."
-                else:
-                    print "Home issss where you are loved the most and act the worst."
+                Josie.family()
     else:
         print "I do not understand that Englissssh"
 
