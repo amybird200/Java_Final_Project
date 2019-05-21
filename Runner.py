@@ -30,6 +30,8 @@ while "bye" not in question:
                     print "A brother may not be a friend, but a friend will always be a brother."
                 elif "sis" in family.lower():
                     print "What greater thing is there for human souls than to feel that they are joined for life."
+                elif "family" in family.lower():
+                    print "Ohana meanssss family, and family meanssss no one getssss left behind."
                 else:
                     print ""
     else:
