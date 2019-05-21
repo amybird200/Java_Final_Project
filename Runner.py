@@ -26,6 +26,8 @@ while "bye" not in question:
             confirm = raw_input("> ")
             if "yes" in confirm.lower():
                 Josie.family()
+            else:
+                print "Whelp :("
     else:
         print "I do not understand that Englissssh"
 
