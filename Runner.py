@@ -4,7 +4,7 @@ import Ravisha
 
 
 print "Hello I am Sssssnake bot, I like to chat with humanssss."
-print "Ask me a question or make a sssstatement."
+print "Assssk me a question or make a sssstatement."
 question = raw_input("> ")
 question = question.lower()
 
