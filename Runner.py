@@ -17,7 +17,7 @@ while "bye" not in question:
         print "That'sssss not nice"
 
     if "day" and "how" in question:
-        print "My day is going good, I made a new friend today. What about your day?"
+        print "My day issss going good, I made a new friend today. What about your day?"
         statement = raw_input("> ")
         if "good" in statement.lower():
             print "That issss good, I'm glad I could be here for it"
