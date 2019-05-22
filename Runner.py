@@ -14,10 +14,10 @@ while "bye" not in question:
     if "hello" or "hi" in question:
         print "Hello human"
 
-    if "fuck" in question:
+    elif "fuck" in question:
         print "That'sssss not nice"
 
-    if "day" and "how" in question:
+    elif "day" and "how" in question:
         print "My day issss going good, I made a new friend today. What about your day?"
         statement = raw_input("> ")
         if "good" in statement.lower():
