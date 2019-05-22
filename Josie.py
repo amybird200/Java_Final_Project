@@ -63,6 +63,12 @@ def weather():  # This is for talking about the weather
         print "Weather forecast for tonight: darknesssss."
 
 
+def escape_room_rules():
+    print "Rules:\t 1. You are trying to escape the room."
+    print "\t\t 2. If it's a yes or no question respond with yes or no"
+    print "\t\t 3. For all the "
+
+
 def escape_room():  # This is a game that can be played with the chatbot where you are escaping from a room
     print "You wake up and you see that you are in a dark room. " \
           "You look around and see light switch on a wall nearby do you flip it?"
