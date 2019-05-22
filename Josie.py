@@ -1,25 +1,25 @@
 def family():  # This is to talk about your family
     count = 0
+    print "Tell me about your family memberssss"
     while count <= 5:
-        print "Tell me about your family memberssss"
-        statement = raw_input("> ")
-        if "mom" or "mother" in statement.lower():
+        statement = raw_input("> ").lower()
+        if "mom" in statement or "mother" in statement:
             print "The apple doessss not fall far from the tree."
             count += 1
-        elif "dad" or "father" in statement.lower():
+        elif "dad" in statement or "father" in statement:
             print "Like father, like sonssss."
             count += 1
-        elif "bro" in statement.lower():
+        elif "bro" in statement:
             print "A brother may not be a friend, but a friend will alwayssss be a brother."
             count += 1
-        elif "sis" in statement.lower():
+        elif "sis" in statement:
             print "What greater thing issss there for human soulssss than to feel that they are joined " \
                     "for life."
             count += 1
-        elif "family" in statement.lower():
+        elif "family" in statement:
             print "Ohana meanssss family, and family meanssss no one getssss left behind."
             count += 1
-        elif "bad" or "sad" in statement.lower():
+        elif "bad" in statement or "sad" in statement:
             print "Familiessss are messy. Immortal familiessss are eternally messy. Sometimessss the best we" \
                     " can do issss to remind each other that we're related for better or for worse and try to" \
                     " keep the maiming and killing to a minimum."
@@ -28,8 +28,8 @@ def family():  # This is to talk about your family
             print "Home issss where you are loved the most and act the worst."
             count += 1
     print "Do you want to talk about your family more?"
-    statement2 = raw_input("> ")
-    if "yes" or "y" in statement2.lower():
+    statement2 = raw_input("> ").lower
+    if "yes" or "y" in statement2:
         family()
 
 
