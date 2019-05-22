@@ -10,7 +10,7 @@ question = question.lower()
 
 while "bye" not in question:
 
-    if "hello" in question:
+    if "hello" or "hi" in question:
         print "Hello human"
 
     if "fuck" in question:
@@ -31,7 +31,7 @@ while "bye" not in question:
     else:
         print "I do not understand that Englissssh"
 
-    print "Ask me a question or make a sssstatement. Or say goodbye to exit."
+    print "Assssk me a question or make a sssstatement. Or ssssay goodbye to exit."
     question = raw_input("> ")
     question = question.lower()
 
