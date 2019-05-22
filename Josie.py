@@ -1,23 +1,36 @@
 def family():  # This is to talk about your family
-    print "Tell me about your family memberssss"
-    statement = raw_input("> ")
-    if "mom" or "mother" in statement.lower():
-        print "The apple doessss not fall far from the tree."
-    elif "dad" or "father" in statement.lower():
-        print "Like father, like sonssss."
-    elif "bro" in statement.lower():
-        print "A brother may not be a friend, but a friend will alwayssss be a brother."
-    elif "sis" in statement.lower():
-        print "What greater thing issss there for human soulssss than to feel that they are joined " \
+    count = 0
+    while count <= 5:
+        print "Tell me about your family memberssss"
+        statement = raw_input("> ")
+        if "mom" or "mother" in statement.lower():
+            print "The apple doessss not fall far from the tree."
+            count += 1
+        elif "dad" or "father" in statement.lower():
+            print "Like father, like sonssss."
+            count += 1
+        elif "bro" in statement.lower():
+            print "A brother may not be a friend, but a friend will alwayssss be a brother."
+            count += 1
+        elif "sis" in statement.lower():
+            print "What greater thing issss there for human soulssss than to feel that they are joined " \
                     "for life."
-    elif "family" in statement.lower():
-        print "Ohana meanssss family, and family meanssss no one getssss left behind."
-    elif "bad" or "sad" in statement.lower():
-        print "Familiessss are messy. Immortal familiessss are eternally messy. Sometimessss the best we" \
+            count += 1
+        elif "family" in statement.lower():
+            print "Ohana meanssss family, and family meanssss no one getssss left behind."
+            count += 1
+        elif "bad" or "sad" in statement.lower():
+            print "Familiessss are messy. Immortal familiessss are eternally messy. Sometimessss the best we" \
                     " can do issss to remind each other that we're related for better or for worse and try to" \
                     " keep the maiming and killing to a minimum."
-    else:
-        print "Home issss where you are loved the most and act the worst."
+            count += 1
+        else:
+            print "Home issss where you are loved the most and act the worst."
+            count += 1
+    print "Do you want to talk about your family more?"
+    statement2 = raw_input("> ")
+    if "yes" or "y" in statement2.lower():
+        family()
 
 
 def weather():  # This is for talking about the weather
@@ -57,7 +70,16 @@ def escape_room():  # This is a game that can be played with the chatbot where y
     if "yes" or "y" in state1.lower():
         print "You flipped the switch... *pop* the light sparked to life and " \
               "you turn around to see a skeleton lying on the floor."
-        print ""
+        print "He has a key around his neck, do you grab it?"
+        state2 = raw_input("> ")
+        if "y" or "yes" in state2.lower():
+            print "You grab the key from around his neck. You survey the room to find a " \
+                  "box on the floor that has a lock. Do you want to try to use the key on the box?"
+            state3 = raw_input("> ")
+            if "y" or "yes" in state3.lower():
+                print""
+            else:
+                print""
     elif "no" or "n" in state1.lower():
         print "You stumble around in the dark for a bit until you trip over something the size of a body."
         print "Do you want to turn on the light now?"
@@ -82,6 +104,7 @@ def escape_room():  # This is a game that can be played with the chatbot where y
                               "Do you walk ALONG the wall or AWAY from the wall?"
                 else:
                     print "You stumble away from the wall until you trip over a small box."
+                    print "The box feels like if has a lock on it. Do you want to see if your key fits?"
         else:
             print "You turn around to see that you tripped over a skeleton"
             print "Dangling from his neck is a small key do you take it?"
