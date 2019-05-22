@@ -1,7 +1,7 @@
 import Nidhi
 import Josie
 import Ravisha
-import random
+
 
 
 print "Hello I am Sssssnake bot, I like to chat with humanssss."
@@ -11,7 +11,7 @@ question = question.lower()
 
 while "bye" not in question:
 
-    if "hello" or "hi" in question:
+    if "hello" in question:
         print "Hello human"
 
     elif "fuck" in question:
@@ -22,23 +22,17 @@ while "bye" not in question:
         statement = raw_input("> ")
         if "good" in statement.lower():
             print "That issss good, I'm glad I could be here for it"
-        elif "bad" or "not" in statement.lower():
+        elif "bad" or "not" or "meh" in statement.lower():
             print "Oh no, can I make your day better?"
             confirm = raw_input("> ")
             if "yes" in confirm.lower():
-                for x in range(1):
-                    if random.randint(1, 3) == 1:
-                        Josie.family()
-                    elif random.randint(1, 3) == 2:
-                        Nidhi.hobbies()
-                    elif random.randint(1, 3) == 3:
-                        Josie.weather()
+                 Josie.family()
             else:
                 print "Whelp :("
     else:
         print "I do not understand that Englissssh"
+        print "Assssk me a question or make a sssstatement. Or ssssay goodbye to exit."
 
-    print "Assssk me a question or make a sssstatement. Or ssssay goodbye to exit."
     question = raw_input("> ")
     question = question.lower()
 
