@@ -1,6 +1,7 @@
 import Nidhi
 import Josie
 import Ravisha
+import random
 
 
 print "Hello I am Sssssnake bot, I like to chat with humanssss."
@@ -25,7 +26,13 @@ while "bye" not in question:
             print "Oh no, can I make your day better?"
             confirm = raw_input("> ")
             if "yes" in confirm.lower():
-                Josie.family()
+                for x in range(1):
+                    if random.randint(1, 3) == 1:
+                        Josie.family()
+                    elif random.randint(1, 3) == 2:
+                        Nidhi.hobbies()
+                    elif random.randint(1, 3) == 3:
+                        Josie.weather()
             else:
                 print "Whelp :("
     else:
