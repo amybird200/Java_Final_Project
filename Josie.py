@@ -1,4 +1,4 @@
-def family():
+def family():  # This is to talk about your family
     print "Tell me about your family memberssss"
     statement = raw_input("> ")
     if "mom" or "mother" in statement.lower():
@@ -20,7 +20,7 @@ def family():
         print "Home issss where you are loved the most and act the worst."
 
 
-def weather():
+def weather():  # This is for talking about the weather
     print "What is the weather like today?"
     statement = raw_input("> ")
     if "rain" in statement.lower():
@@ -48,3 +48,10 @@ def weather():
         print "The best thing one can do when it isssss raining issss to let it rain."
     else:
         print "Weather forecast for tonight: darknesssss."
+
+
+def escape_room():  # This is a game that can be played with the chatbot
+    print "You wake up and you see that you are in a dark room. You look around and see light switch do you flip it?"
+    state1 = raw_input("> ")
+    if "yes" or "y" in state1.lower():
+        print "You flipped the switch"
