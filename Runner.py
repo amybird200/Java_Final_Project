@@ -31,7 +31,7 @@ while "bye" not in question:
     else:
         print "I do not understand that Englissssh"
 
-    print "Ask me a question or make a sssstatement."
+    print "Ask me a question or make a sssstatement. Or say goodbye to exit."
     question = raw_input("> ")
     question = question.lower()
 
