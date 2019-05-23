@@ -1,9 +1,19 @@
+import Nidhi
+import Josie
+import Ravisha
+import MainSelect
+
+
 def hobbies():
     count = 0
     print "What are your hobbiesssss? Sportsss? Perhapssss the artsss?"
-    statement = raw_input("> ").lower()
-    while count < 5:
-        if "soccer" in statement:
+    while count <= 5:
+        statement = raw_input("> ").lower()
+        if "stop" in statement:
+            print "Alright, let'sssss try a different topic."
+            MainSelect.select()
+            # change later to go back to mainSelectMenu
+        elif "soccer" in statement:
             print "Goooooooooooooaaaaaaalllll!!!"
             count += 1
         elif "football" in statement:
@@ -61,10 +71,13 @@ def hobbies():
 
 def pets():
     count = 0
-    print "Do you own any petssss?"
-    statement = raw_input("> ").lower()
+    print "Do you own any petssss? (say 'stop' to exit anytime)"
     while count < 5:
-        if "snake" in statement:
+        statement = raw_input("> ").lower()
+        if "stop" in statement:
+            print "Alright, let'ssss try a different topic."
+            MainSelect.select()
+        elif "snake" in statement:
             print "The besssst animal!"
             count += 1
         elif "dog" in statement:
@@ -96,5 +109,6 @@ def pets():
     if "yes" or "y" in statement2:
         pets()
 
-
+def snakefacts():
+    count = 0
 
