@@ -1,5 +1,5 @@
 def hobbies():
-    count = 0;
+    count = 0
     print "What are your hobbiesssss? Sportsss? Maybe the artsss?"
     statement = raw_input("> ").lower()
     while count < 5:
