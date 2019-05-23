@@ -148,17 +148,38 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                                   "You decide it's not a big deal and continue walking. " \
                                   "Then all of the sudden you feel a slice in your arm then nothing. " \
                                   "You look at your arm and notice there is no arm. " \
-                                  "You pass out from the lack of blood."
+                                  "You pass out as you bleed to death."
                             print "Would you like to attempt the room again?"
                             state7 = raw_input("> ")
                             if "y" in state7.lower():
                                 escape_room1()
                         elif "away" in state6.lower():
-                            print ""
+                            print "You shuffle away from the wall. " \
+                                  "You trip over a box this time and realize it has a lock that would fit the key " \
+                                  "that you stole from the dead guy laying next to you. " \
+                                  "Do you use the key to open the box?"
+                            state7 = raw_input("> ")
+                            if "y" in state7.lower():
+                                print ""
+                            else:
+                                print ""
                         else:
-                            print ""
+                            print "You fall against the wall in a moment of dizziness" \
+                                  " and accidentally hit the light switch. " \
+                                  "After you regain your wits you notice there is a box a bit beyond the skeleton. " \
+                                  "Do you walk to the box and try the key?"
+                            state7 = raw_input("> ")
+                            if "y" in state7.lower():
+                                print "You walk up to the box and insert the key. It slips in effortlessly. "
+                            else:
+                                print "As you stare at the box you feel your vision go blurry again. " \
+                                      "You need to get water soon. Maybe there is some in the box. " \
+                                      "Do you go to open the box?"
+                                state8 = raw_input("> ")
+                                if "y" in state8.lower():
+
                     else:
-                        print ""
+                        print "You flip the light switch. "
                 elif "away" in state4.lower():
                     print "You stumble away from the wall until you trip over a small box."
                     print "The box feels like if has a lock on it. Do you want to see if your key fits?"
