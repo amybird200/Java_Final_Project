@@ -33,6 +33,7 @@ def family():  # This is to talk about your family
         family()
 
 
+
 def weather():  # This is for talking about the weather
     print "What is the weather like today?"
     statement = raw_input("> ")
