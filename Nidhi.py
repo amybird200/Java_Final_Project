@@ -1,6 +1,6 @@
 def hobbies():
     count = 0
-    print "What are your hobbiesssss? Sportsss? Maybe the artsss?"
+    print "What are your hobbiesssss? Sportsss? Perhapssss the artsss?"
     statement = raw_input("> ").lower()
     while count < 5:
         if "soccer" in statement:
@@ -58,3 +58,23 @@ def hobbies():
     statement2 = raw_input("> ").lower
     if "yes" or "y" in statement2:
         hobbies()
+
+def pets():
+    count = 0
+    print "Do you own any petssss?"
+    statement = raw_input("> ").lower()
+    while count < 5:
+        if "snake" in statement:
+            print "The besssst animal!"
+        elif "dog" in statement:
+            print "Dog is man'ssss besssst friend."
+        elif "cat" in statement:
+            print "What greater gift than the love of a cat."
+        elif "rabbit" in statement or "bunny" in statement:
+            print "What'sss up, doc?"
+        elif "hamster" in statement or "guinea pig" in statement:
+            print "Mmmmmm dinner."
+        elif
+
+
+
