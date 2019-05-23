@@ -6,8 +6,10 @@ def hobbies():
         if "sports" in statement:
             if "soccer" in statement:
                 print "Goooooooooooooaaaaaaalllll!!!"
+                count += 1
             elif "football" in statement:
                 print "The grind never sssstopsssss."
+
             elif "volleyball" in statement:
                 print "Ssssssspike it."
             elif "baseball" in statement:
