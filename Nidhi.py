@@ -35,4 +35,4 @@ def hobbies():
     elif "writing" or "write" in statement:
         print "There isssss no greater agony than bearing an untold sssssstory inside you."
     else:
-        print "That'sssss boring."
+        print "That'ssssss boring."
