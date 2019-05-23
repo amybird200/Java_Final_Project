@@ -66,37 +66,46 @@ def weather():  # This is for talking about the weather
 def escape_room_rules():
     print "Rules:\t 1. You are trying to escape the room."
     print "\t\t 2. If it's a yes or no question respond with yes or no"
-    print "\t\t 3. For all the "
+    print "\t\t 3. For all the other questions type in the word that is all caps for the word."
 
 
 def escape_room():  # This is a game that can be played with the chatbot where you are escaping from a room
     print "You wake up and you see that you are in a dark room. " \
           "You look around and see light switch on a wall nearby do you flip it?"
     state1 = raw_input("> ")
-    if "yes" or "y" in state1.lower():
+    if "y" in state1.lower():
         print "You flipped the switch... *pop* the light sparked to life and " \
               "you turn around to see a skeleton lying on the floor."
         print "He has a key around his neck, do you grab it?"
         state2 = raw_input("> ")
-        if "y" or "yes" in state2.lower():
+        if "y" in state2.lower():
             print "You grab the key from around his neck. You survey the room to find a " \
                   "box on the floor that has a lock. Do you want to try to use the key on the box?"
             state3 = raw_input("> ")
-            if "y" or "yes" in state3.lower():
+            if "y" in state3.lower():
                 print""
             else:
                 print""
-    elif "no" or "n" in state1.lower():
+        else:
+            print "You survey the room to find a box with a lock. The key might fit there. " \
+                  "Do you want to grab the key to open the box?"
+            state3 = raw_input("> ")
+            if "y" in state3.lower():
+                print "You grab the key from the skeleton and walk towards the box. The key fits into the lock. " \
+                      "Do you turn the key and open the box?"
+            else:
+                print ""
+    elif "n" in state1.lower():
         print "You stumble around in the dark for a bit until you trip over something the size of a body."
         print "Do you want to turn on the light now?"
         state2 = raw_input("> ")
-        if "no" or "n" in state2.lower():
+        if "n" in state2.lower():
             print "You stumble around a bit more feeling the thing that you tripped over. " \
                   "It feels like a human skeleton."
             print "As you are feeling up the dead guy you realize that there is a key around his neck." \
                   " Do you take the key?"
             state3 = raw_input("> ")
-            if "yes" or "y" in state3.lower():
+            if "y" in state3.lower():
                 print "you snatch the key from around his neck and push yourself up off of him. " \
                       "You stand up and look around deciding whether you head AWAY from the wall and light switch " \
                       "or go TOWARDs the wall and light switch."
@@ -105,7 +114,7 @@ def escape_room():  # This is a game that can be played with the chatbot where y
                     print "You are standing in front of the light switch and this is " \
                           "your last chance to flip the light. Do you flip the light switch?"
                     state5 = raw_input("> ")
-                    if "no" or "n" in state5.lower():
+                    if "n" in state5.lower():
                         print "you decide to not flip the light switch. " \
                               "Do you walk ALONG the wall or AWAY from the wall?"
                 else:
