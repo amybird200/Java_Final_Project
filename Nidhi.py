@@ -66,15 +66,35 @@ def pets():
     while count < 5:
         if "snake" in statement:
             print "The besssst animal!"
+            count += 1
         elif "dog" in statement:
             print "Dog is man'ssss besssst friend."
+            count += 1
         elif "cat" in statement:
             print "What greater gift than the love of a cat."
+            count += 1
         elif "rabbit" in statement or "bunny" in statement:
             print "What'sss up, doc?"
+            count += 1
         elif "hamster" in statement or "guinea pig" in statement:
             print "Mmmmmm dinner."
-        elif
+            count += 1
+        elif "fish" in statement:
+            print "'I know the human being and fisssssh can co-exist peacefully.' - George W. Busssssh"
+            count += 1
+        elif "bird" in statement:
+            print "Polly want a cracker?"
+            count += 1
+        elif "turtles" in statement:
+            print "Sssslow and sssssteady winssss the race."
+            count += 1
+        else:
+            print "Fasssssscinating. I hope it doessssn't bite!"
+            count += 1
+    print "Do you want to talk about your petsssss more?"
+    statement2 = raw_input("> ").lower
+    if "yes" or "y" in statement2:
+        pets()
 
 
 

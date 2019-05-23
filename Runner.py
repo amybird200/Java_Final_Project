@@ -22,11 +22,32 @@ while "bye" not in question:
         statement = raw_input("> ")
         if "good" in statement.lower():
             print "That issss good, I'm glad I could be here for it"
-        elif "bad" or "not" or "meh" in statement.lower():
+        elif "bad" in statement.lower() or "not" in statement.lower() or "meh" in statement.lower():
             print "Oh no, can I make your day better?"
             confirm = raw_input("> ")
-            if "yes" in confirm.lower():
-                 Josie.family()
+            if "yes" in confirm.lower() or "sure" in confirm.lower():
+                print "Would you like to talk about your family?"
+                confirm = raw_input("> ")
+                if "yes" in confirm.lower() or "sure" in confirm.lower():
+                    Josie.family()
+                print "Would you like to talk about the weather?"
+                confirm = raw_input("> ")
+                if "yes" in confirm.lower() or "sure" in confirm.lower():
+                    Josie.weather()
+                print "Would you like to talk about your hobbies?"
+                confirm = raw_input("> ")
+                if "yes" in confirm.lower() or "sure" in confirm.lower():
+                    Nidhi.hobbies()
+                print "Would you like to talk about your pets?"
+                confirm = raw_input("> ")
+                if "yes" in confirm.lower() or "sure" in confirm.lower():
+                    Nidhi.pets()
+                print "Would you like to play Escape Room?"
+                confirm = raw_input("> ")
+                if "yes" in confirm.lower() or "sure" in confirm.lower():
+                    Josie.escape_room()
+                else:
+                    print "I guess we'll just sssssit here."
             else:
                 print "Whelp :("
     else:
