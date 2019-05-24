@@ -21,6 +21,10 @@ def select():
     confirm = raw_input("> ")
     if "yes" in confirm.lower() or "y" in confirm.lower():
         Nidhi.pets()
+    print "Would you like to hear snake facts?"
+    confirm = raw_input("> ")
+    if "yes" in confirm.lower() or "y" in confirm.lower():
+        Nidhi.snakefacts()
     print "Would you like to play Escape Room?"
     confirm = raw_input("> ")
     if "yes" in confirm.lower() or "y" in confirm.lower():
