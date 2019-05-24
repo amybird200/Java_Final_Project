@@ -12,7 +12,7 @@ def select():
     print "Would you like to talk about the weather?"
     confirm = raw_input("> ")
     if "yes" in confirm.lower() or "y" in confirm.lower():
-        Nidhi.weather()
+        Josie.weather()
     print "Would you like to talk about your hobbies?"
     confirm = raw_input("> ")
     if "yes" in confirm.lower() or "y" in confirm.lower():
