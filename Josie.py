@@ -34,7 +34,7 @@ def family():  # This is to talk about your family
     if "yes" or "y" in statement2:
         family()
     else:
-        print "Okay, let'ssss talk about something else."
+        print "Okay, let'ssss talk about something elsssse."
         MainSelect.select()
 
 def weather():  # This is for talking about the weather
@@ -86,7 +86,7 @@ def weather():  # This is for talking about the weather
     if "yes" in statement2 or "y" in statement2:
         weather()
     else:
-        print "Okay, let'ssss talk about something else."
+        print "Okay, let'ssss talk about something elssse."
         MainSelect.select()
 
 
@@ -276,7 +276,7 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                           "Causing a nasty brain bleed, too bad."
                     print "Would you like to attempt the room again?"
                     state5 = raw_input("> ")
-                    if "y" in state8.lower():
+                    if "y" in state5.lower():
                         escape_room1()
             else:
                 print "You decide not to take the key and try to get up off the skeleton. " \
