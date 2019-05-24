@@ -1,5 +1,6 @@
 import MainSelect
 
+
 def family():  # This is to talk about your family
     count = 0
     print "Tell me about your family memberssss"
@@ -36,6 +37,7 @@ def family():  # This is to talk about your family
     else:
         print "Okay, let'ssss talk about something elsssse."
         MainSelect.select()
+
 
 def weather():  # This is for talking about the weather
     count = 0
@@ -94,9 +96,12 @@ def escape_room_rules():
     print "Rules:\t 1. You are trying to escape the room."
     print "\t\t 2. If it's a yes or no question respond with a y for yes or an n for no"
     print "\t\t 3. For all the other questions type in the word that is all caps for the word."
-    print "press anything to return to the lobby."
+    print "press anything to return to the lobby or EXIT to go back to main select."
     state = raw_input("> ")
-    escape_room_lobby()
+    if "exit" in state.lower():
+        MainSelect.select()
+    else:
+        escape_room_lobby()
 
 
 def escape_room_lobby():
@@ -112,6 +117,7 @@ def escape_room_lobby():
         escape_room_rules()
     else:
         print "Goodbye"
+        MainSelect.select()
 
 
 def escape_room1():  # This is a game that can be played with the chatbot where you are escaping from a room
