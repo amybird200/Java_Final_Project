@@ -111,14 +111,23 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
             state3 = raw_input("> ")
             if "y" in state3.lower():
                 print "You grab the key from the skeleton and walk towards the box. The key fits into the lock. " \
-                      "Do you turn the key and open the box?"
+                      "You turn the key and open the box to find a letter and pocket watch in the box. " \
+                      "Do you want to read the note?"
+            else:
+                print "You start walking down the long hallway that makes up the room. " \
+                      "As you start walking you see lots of knives along the walls. Would you like to take one down?"
                 state4 = raw_input("> ")
                 if "n" in state4.lower():
                     print ""
                 else:
-                    print ""
-            else:
-                print ""
+                    print "You pull down a nice kitchen knife that comes with a sheath you can put on your belt."
+                    print "You continue to look around and find a door. " \
+                          "Do you want to try to open the door?"
+                    state5 = raw_input("> ")
+                    if "y" in state5.lower("> "):
+                        print ""
+                    else:
+                        print ""
     elif "n" in state1.lower():
         print "You stumble around in the dark for a bit until you trip over something the size of a body."
         print "Do you want to turn on the light now?"
@@ -177,7 +186,9 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                                       "Do you go to open the box?"
                                 state8 = raw_input("> ")
                                 if "y" in state8.lower():
-
+                                    print ""
+                                else:
+                                    print ""
                     else:
                         print "You flip the light switch. "
                 elif "away" in state4.lower():
@@ -271,3 +282,8 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
         state2 = raw_input("> ")
         if "yes" or "y" in state2.lower():
             escape_room1()
+
+
+def room1_note():
+    print "You have been kidnapped by a secret organization that wants to kill all snakes.\n" \
+          "In order to get out you need to kill the guy that brings you food at noon sharp."
