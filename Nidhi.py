@@ -59,7 +59,7 @@ def hobbies():
             print "There isssss no greater agony than bearing an untold sssssstory inside you."
             count += 1
         else:
-            print "That'ssssss interesting. Anything else?"
+            print "That'ssssss interesting. Anything elsssse?"
             count += 1
     print "Do you want to talk about your hobbiessss more? (yes/no)"
     statement2 = raw_input("> ").lower()
@@ -75,9 +75,6 @@ def pets():
         statement = raw_input("> ").lower()
         if "stop" in statement:
             print "Alright, let'sssss try a different topic."
-            MainSelect.select()
-        elif "stop" in statement:
-            print "Alright, let'ssss try a different topic."
             MainSelect.select()
         elif "snake" in statement:
             print "The besssst animal!"
@@ -111,10 +108,38 @@ def pets():
     if "yes" in statement2 or "y" in statement2:
         pets()
     else:
-        print "Okay, let'ssss talk about something else."
+        print "Okay, let'ssss talk about something elsssse."
         MainSelect.select()
 
 def snakefacts():
     count = 0
-
-
+    print "Give me a number from 1 - 20 and I'll give you a snake fact."
+    while count < 5:
+        statement = raw_input("> ").lower()
+        statement = int(statement)
+        if "20" == statement:
+            print "Snakes range in size from the tiny, 10 cm-long thread snake, " \
+            "to the reticulated python of up to 6.95 meters (22.8 ft) in length."
+        if 19 == statement:
+            print "There's an Island in Brazil where civilians are forbidden to go: it has up to 5 snakes per square meter."
+        if 18 == statement:
+            print "Snakes can have two heads and fight each other for food."
+        if 17 == statement:
+            print "The top ten deadliest snakes can be found in Australia."
+        if 16 == statement:
+            print "Snakes can open their mouth up to 150 degrees."
+        if 15 == statement:
+            print "The Titanoboa lived 60 million years ago and is the largest, "
+            "longest, and heaviest snake ever discovered."
+        if 14 == statement:
+            print "Snakes don't have eyelids."
+        if 13 == statement:
+            print "Snakes use their tongues to smell."
+        if 12 == statement:
+            print "51% of Americans fear snakes, most than any other thing in the world."
+        if 11 == statement:
+            print "There has never been snakes in Ireland because being cold-blooded, " \
+                  "snake couldn't survive the frozen ground during the ice age in the past."
+        if 10 == statement:
+            print "More than 20 snake families are currently recognized, " \
+                  "comprising about 500 genera and about 3,400 species."
