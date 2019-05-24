@@ -1,8 +1,5 @@
-import Nidhi
-import Josie
-import Ravisha
-import MainSelect
 
+import MainSelect
 
 def hobbies():
     count = 0
@@ -64,17 +61,22 @@ def hobbies():
         else:
             print "That'ssssss interesting. Anything else?"
             count += 1
-    print "Do you want to talk about your hobbiessss more?"
-    statement2 = raw_input("> ").lower
-    if "yes" or "y" in statement2:
+    print "Do you want to talk about your hobbiessss more? (yes/no)"
+    statement2 = raw_input("> ").lower()
+    if "yes" in statement2 or "y" in statement2:
         hobbies()
+    else:
+        print "Okay, let'ssss talk about something else."
 
 def pets():
     count = 0
-    print "Do you own any petssss? (say 'stop' to exit anytime)"
+    print "Do you own any petssss?"
     while count < 5:
         statement = raw_input("> ").lower()
         if "stop" in statement:
+            print "Alright, let'sssss try a different topic."
+            MainSelect.select()
+        elif "stop" in statement:
             print "Alright, let'ssss try a different topic."
             MainSelect.select()
         elif "snake" in statement:
@@ -104,11 +106,15 @@ def pets():
         else:
             print "Fasssssscinating. I hope it doessssn't bite!"
             count += 1
-    print "Do you want to talk about your petsssss more?"
-    statement2 = raw_input("> ").lower
-    if "yes" or "y" in statement2:
+    print "Do you want to talk about your petsssss more? (yes/no)"
+    statement2 = raw_input("> ").lower()
+    if "yes" in statement2 or "y" in statement2:
         pets()
+    else:
+        print "Okay, let'ssss talk about something else."
+        MainSelect.select()
 
 def snakefacts():
     count = 0
+
 

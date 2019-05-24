@@ -1,7 +1,7 @@
 import Nidhi
 import Josie
 import Ravisha
-import Runner
+
 
 
 def select():
@@ -24,7 +24,7 @@ def select():
     print "Would you like to play Escape Room?"
     confirm = raw_input("> ")
     if "yes" in confirm.lower() or "y" in confirm.lower():
-        Josie.escape_room()
+        Josie.escape_room_lobby()
     else:
         print "Okay, we'll talk another time then."
 

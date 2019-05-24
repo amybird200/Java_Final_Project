@@ -1,3 +1,6 @@
+import MainSelect
+
+
 def family():  # This is to talk about your family
     count = 0
     print "Tell me about your family memberssss"
@@ -31,46 +34,74 @@ def family():  # This is to talk about your family
     statement2 = raw_input("> ").lower
     if "yes" or "y" in statement2:
         family()
-
+    else:
+        print "Okay, let'ssss talk about something elsssse."
+        MainSelect.select()
 
 
 def weather():  # This is for talking about the weather
+    count = 0
     print "What is the weather like today?"
-    statement = raw_input("> ")
-    if "rain" in statement.lower():
-        print "when it rains it pourssss"
-    elif "sun" in statement.lower():
-        print "Anyone who sayssss sunshine bringssss happinessss has never danced in the rain."
-    elif "cloud" in statement.lower():
-        print "Cloudssss come floating into my life, no longer to carry rain or usher sssstorm," \
+    while count < 5:
+        statement = raw_input("> ")
+        if "stop" in statement:
+            print "Alright, let'sssss try a different topic."
+            MainSelect.select()
+        elif "rain" in statement.lower():
+            print "when it rains it pourssss"
+            count += 1
+        elif "sun" in statement.lower():
+            print "Anyone who sayssss sunshine bringssss happinessss has never danced in the rain."
+            count += 1
+        elif "cloud" in statement.lower():
+            print "Cloudssss come floating into my life, no longer to carry rain or usher sssstorm," \
               " but to add color to my sunset ssssky."
-    elif "cold" in statement.lower():
-        print "The coldest winter I ever spent was a ssssummer in San Francisco."
-    elif "warm" in statement.lower():
-        print "Fine weather issss a prejudice of youth. For an old man, the weather can be neither fine nor bad;" \
-              " it issss the very texture of the weather that seemssss pricelesssss, whether brightened by shaftssss" \
-              " of sunlight or clouded with darknesssss."
-    elif "snow" in statement.lower():
-        print "When sssnow fallssss, nature listenssss."
-    elif "wind" in statement.lower():
-        print "No one but Night, with tearssss on her dark face, watchessss beside me in thissss windy place."
-    elif "thunder" or "lightning" in statement.lower():
-        print "Lightning streakssss like gunfire through the cloudssss, volleysssss of thunder shake the air. "
-    elif "storm" in statement.lower():
-        print "The calm before the ssssstorm"
-    elif "driz" in statement.lower():
-        print "The best thing one can do when it isssss raining issss to let it rain."
+            count += 1
+        elif "cold" in statement.lower():
+            print "The coldest winter I ever spent was a ssssummer in San Francisco."
+            count += 1
+        elif "warm" in statement.lower():
+            print "Fine weather issss a prejudice of youth. For an old man, the weather can be neither fine nor bad;" \
+                " it issss the very texture of the weather that seemssss pricelesssss, whether brightened by shaftssss" \
+                " of sunlight or clouded with darknesssss."
+            count += 1
+        elif "snow" in statement.lower():
+            print "When sssnow fallssss, nature listenssss."
+            count += 1
+        elif "wind" in statement.lower():
+            print "No one but Night, with tearssss on her dark face, watchessss beside me in thissss windy place."
+            count += 1
+        elif "thunder" in statement.lower() or "lightning" in statement.lower():
+            print "Lightning streakssss like gunfire through the cloudssss, volleysssss of thunder shake the air. "
+            count += 1
+        elif "storm" in statement.lower():
+            print "The calm before the ssssstorm"
+            count += 1
+        elif "driz" in statement.lower():
+            print "The best thing one can do when it isssss raining issss to let it rain."
+            count += 1
+        else:
+            print "Weather forecast for tonight: darknesssss."
+            count += 1
+    print "Do you want to talk about the weather more? (yes/no)"
+    statement2 = raw_input("> ").lower()
+    if "yes" in statement2 or "y" in statement2:
+        weather()
     else:
-        print "Weather forecast for tonight: darknesssss."
+        print "Okay, let'ssss talk about something elssse."
+        MainSelect.select()
 
 
 def escape_room_rules():
     print "Rules:\t 1. You are trying to escape the room."
     print "\t\t 2. If it's a yes or no question respond with a y for yes or an n for no"
     print "\t\t 3. For all the other questions type in the word that is all caps for the word."
-    print "press anything to return to the lobby."
+    print "press anything to return to the lobby or EXIT to go back to main select."
     state = raw_input("> ")
-    escape_room_lobby()
+    if "exit" in state.lower():
+        MainSelect.select()
+    else:
+        escape_room_lobby()
 
 
 def escape_room_lobby():
@@ -86,6 +117,7 @@ def escape_room_lobby():
         escape_room_rules()
     else:
         print "Goodbye"
+        MainSelect.select()
 
 
 def escape_room1():  # This is a game that can be played with the chatbot where you are escaping from a room
@@ -102,7 +134,18 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                   "box on the floor that has a lock. Do you want to try to use the key on the box?"
             state3 = raw_input("> ")
             if "y" in state3.lower():
-                print""
+                print"You open the box to find a clock and a note. Do you want to read the note?"
+                state4 = raw_input("> ")
+                if "y" in state4.lower():
+                    room1_note()
+                    print "Would you like to WAIT until noon or EXPLORE the room you are trapped in for a weapon?"
+                    state5 = raw_input("> ")
+                    if "explore" in state5.lower():
+                        print ""
+                    else:
+                        print ""
+                else:
+                    print ""
             else:
                 print""
         else:
@@ -169,7 +212,18 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                                   "Do you use the key to open the box?"
                             state7 = raw_input("> ")
                             if "y" in state7.lower():
-                                print ""
+                                print "The box pops open. Inside is a note and a clock. Do you wish to read the note?"
+                                state8 = raw_input("> ")
+                                if "y" in state8.lower():
+                                    room1_note()
+                                    print "Do you wish to WAIT until noon or EXPLORE to find a weapon?"
+                                    state9 = raw_input("> ")
+                                    if "explore" in state9.lower():
+                                        print ""
+                                    else:
+                                        print ""
+                                else:
+                                    print ""
                             else:
                                 print ""
                         else:
@@ -179,14 +233,38 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                                   "Do you walk to the box and try the key?"
                             state7 = raw_input("> ")
                             if "y" in state7.lower():
-                                print "You walk up to the box and insert the key. It slips in effortlessly. "
+                                print "You walk up to the box and insert the key. It slips in effortlessly. " \
+                                      "You turn it and the box pops open easily. " \
+                                      "Inside is a note and a pocketwatch. Do yu wish to read the note?"
+                                state8 = raw_input("> ")
+                                if "y" in state8.lower():
+                                    room1_note()
+                                    print "Do you wish to EXPLORE for a weapon or WAIT for noon?"
+                                    state9 = raw_input("> ")
+                                    if "explore" in state9.lower():
+                                        print ""
+                                    else:
+                                        print ""
+                                else:
+                                    print ""
                             else:
                                 print "As you stare at the box you feel your vision go blurry again. " \
                                       "You need to get water soon. Maybe there is some in the box. " \
                                       "Do you go to open the box?"
                                 state8 = raw_input("> ")
                                 if "y" in state8.lower():
-                                    print ""
+                                    print "You open the box to find a note and a clock. Do you wish to read the note?"
+                                    state9 = raw_input("> ")
+                                    if "y" in state9.lower():
+                                        room1_note()
+                                        print "Do you wish to EXPLORE or WAIT for noon?"
+                                        state10 = raw_input("> ")
+                                        if "explore" in state10.lower():
+                                            print ""
+                                        else:
+                                            print ""
+                                    else:
+                                        print ""
                                 else:
                                     print ""
                     else:
@@ -204,7 +282,7 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                           "Causing a nasty brain bleed, too bad."
                     print "Would you like to attempt the room again?"
                     state5 = raw_input("> ")
-                    if "y" in state8.lower():
+                    if "y" in state5.lower():
                         escape_room1()
             else:
                 print "You decide not to take the key and try to get up off the skeleton. " \
@@ -286,4 +364,6 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
 
 def room1_note():
     print "You have been kidnapped by a secret organization that wants to kill all snakes.\n" \
-          "In order to get out you need to kill the guy that brings you food at noon sharp."
+          "In order to get out you need to kill the guy that brings you food at noon sharp.\n" \
+          "Run and don't turn around or hesitate for any reason. " \
+          "Your snake will be there to save you.",
