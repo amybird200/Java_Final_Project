@@ -65,6 +65,8 @@ def hobbies():
     statement2 = raw_input("> ").lower()
     if "yes" in statement2 or "y" in statement2:
         hobbies()
+    else:
+        print "Okay, let'ssss talk about something else."
 
 def pets():
     count = 0
@@ -109,7 +111,7 @@ def pets():
     if "yes" in statement2 or "y" in statement2:
         pets()
     else:
-        print "Okay, let's talk about something else."
+        print "Okay, let'ssss talk about something else."
         MainSelect.select()
 
 def snakefacts():
@@ -165,6 +167,6 @@ def weather():  # This is for talking about the weather
     if "yes" in statement2 or "y" in statement2:
         weather()
     else:
-        print "Okay, let's talk about something else."
+        print "Okay, let'ssss talk about something else."
         MainSelect.select()
 
