@@ -1,8 +1,5 @@
-import Nidhi
-import Josie
-import Ravisha
-import MainSelect
 
+import MainSelect
 
 def hobbies():
     count = 0
@@ -64,17 +61,20 @@ def hobbies():
         else:
             print "That'ssssss interesting. Anything else?"
             count += 1
-    print "Do you want to talk about your hobbiessss more?"
-    statement2 = raw_input("> ").lower
-    if "yes" or "y" in statement2:
+    print "Do you want to talk about your hobbiessss more? (yes/no)"
+    statement2 = raw_input("> ").lower()
+    if "yes" in statement2 or "y" in statement2:
         hobbies()
 
 def pets():
     count = 0
-    print "Do you own any petssss? (say 'stop' to exit anytime)"
+    print "Do you own any petssss?"
     while count < 5:
         statement = raw_input("> ").lower()
         if "stop" in statement:
+            print "Alright, let'sssss try a different topic."
+            MainSelect.select()
+        elif "stop" in statement:
             print "Alright, let'ssss try a different topic."
             MainSelect.select()
         elif "snake" in statement:
@@ -104,11 +104,67 @@ def pets():
         else:
             print "Fasssssscinating. I hope it doessssn't bite!"
             count += 1
-    print "Do you want to talk about your petsssss more?"
-    statement2 = raw_input("> ").lower
-    if "yes" or "y" in statement2:
+    print "Do you want to talk about your petsssss more? (yes/no)"
+    statement2 = raw_input("> ").lower()
+    if "yes" in statement2 or "y" in statement2:
         pets()
+    else:
+        print "Okay, let's talk about something else."
+        MainSelect.select()
 
 def snakefacts():
     count = 0
+
+
+def weather():  # This is for talking about the weather
+    count = 0
+    print "What is the weather like today?"
+    while count < 5:
+        statement = raw_input("> ")
+        if "stop" in statement:
+            print "Alright, let'sssss try a different topic."
+            MainSelect.select()
+        elif "rain" in statement.lower():
+            print "when it rains it pourssss"
+            count += 1
+        elif "sun" in statement.lower():
+            print "Anyone who sayssss sunshine bringssss happinessss has never danced in the rain."
+            count += 1
+        elif "cloud" in statement.lower():
+            print "Cloudssss come floating into my life, no longer to carry rain or usher sssstorm," \
+              " but to add color to my sunset ssssky."
+            count += 1
+        elif "cold" in statement.lower():
+            print "The coldest winter I ever spent was a ssssummer in San Francisco."
+            count += 1
+        elif "warm" in statement.lower():
+            print "Fine weather issss a prejudice of youth. For an old man, the weather can be neither fine nor bad;" \
+                " it issss the very texture of the weather that seemssss pricelesssss, whether brightened by shaftssss" \
+                " of sunlight or clouded with darknesssss."
+            count += 1
+        elif "snow" in statement.lower():
+            print "When sssnow fallssss, nature listenssss."
+            count += 1
+        elif "wind" in statement.lower():
+            print "No one but Night, with tearssss on her dark face, watchessss beside me in thissss windy place."
+            count += 1
+        elif "thunder" in statement.lower() or "lightning" in statement.lower():
+            print "Lightning streakssss like gunfire through the cloudssss, volleysssss of thunder shake the air. "
+            count += 1
+        elif "storm" in statement.lower():
+            print "The calm before the ssssstorm"
+            count += 1
+        elif "driz" in statement.lower():
+            print "The best thing one can do when it isssss raining issss to let it rain."
+            count += 1
+        else:
+            print "Weather forecast for tonight: darknesssss."
+            count += 1
+    print "Do you want to talk about the weather more? (yes/no)"
+    statement2 = raw_input("> ").lower()
+    if "yes" in statement2 or "y" in statement2:
+        weather()
+    else:
+        print "Okay, let's talk about something else."
+        MainSelect.select()
 
