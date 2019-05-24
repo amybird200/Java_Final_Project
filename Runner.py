@@ -1,8 +1,5 @@
-import Nidhi
-import Josie
-import Ravisha
 
-
+import MainSelect
 
 print "Hello I am Sssssnake bot, I like to chat with humanssss."
 print "Assssk me a question or make a sssstatement."
@@ -11,7 +8,7 @@ question = question.lower()
 
 while "bye" not in question:
 
-    if "hello" in question:
+    if "hello" in question or "hi" in question or "hey" in question:
         print "Hello human"
 
     elif "fuck" in question:
