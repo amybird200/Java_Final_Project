@@ -17,7 +17,7 @@ def select():
     confirm = raw_input("> ")
     if "yes" in confirm.lower() or "y" in confirm.lower():
         Nidhi.hobbies()
-    print "Would you like to talk about your pets?"
+    print "Would you like to talk about animals?"
     confirm = raw_input("> ")
     if "yes" in confirm.lower() or "y" in confirm.lower():
         Nidhi.pets()
