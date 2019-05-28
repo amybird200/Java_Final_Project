@@ -1,13 +1,15 @@
 import Nidhi
 import Josie
 import Ravisha
+import Detect
 
 
 
 def select():
     print "Would you like to talk about your family?"
     confirm = raw_input("> ")
-    if "yes" in confirm.lower() or "y" in confirm.lower():
+
+    if Detect.yesResponses(confirm):  #"yes" in confirm.lower() or "y" in confirm.lower():
         Josie.family()
     print "Would you like to talk about the weather?"
     confirm = raw_input("> ")
@@ -17,7 +19,7 @@ def select():
     confirm = raw_input("> ")
     if "yes" in confirm.lower() or "y" in confirm.lower():
         Nidhi.hobbies()
-    print "Would you like to talk about your pets?"
+    print "Would you like to talk about animals?"
     confirm = raw_input("> ")
     if "yes" in confirm.lower() or "y" in confirm.lower():
         Nidhi.pets()
@@ -30,6 +32,6 @@ def select():
     if "yes" in confirm.lower() or "y" in confirm.lower():
         Josie.escape_room_lobby()
     else:
-        print "Okay, we'll talk another time then."
+        Ravisha.smallTalk()
 
 

@@ -58,6 +58,8 @@ def hobbies():
         elif "writing" in statement or "write" in statement:
             print "There isssss no greater agony than bearing an untold sssssstory inside you."
             count += 1
+        elif "photography" in statement or "photo" in statement:
+            print "A picture issss worth a thoussssand wordssss."
         else:
             print "That'ssssss interesting. Anything elsssse?"
             count += 1
@@ -70,7 +72,7 @@ def hobbies():
 
 def pets():
     count = 0
-    print "Do you own any petssss?"
+    print "What are your favorite animals?"
     while count < 5:
         statement = raw_input("> ").lower()
         if "stop" in statement:
@@ -100,10 +102,36 @@ def pets():
         elif "turtles" in statement:
             print "Sssslow and sssssteady winssss the race."
             count += 1
-        else:
-            print "Fasssssscinating. I hope it doessssn't bite!"
+        elif "whale" in statement:
+            print "The giantsssss of the water."
             count += 1
-    print "Do you want to talk about your petsssss more? (yes/no)"
+        elif "shark" in statement:
+            print "Sssssharks aren't the monstersssss we make them out to be."
+            count += 1
+        elif "monkey" in statement or "chimp" in statement or "orangutan" in statement or "baboon" in statement or "gorrillas" in statement or "howler" in statement or "gibbons" in statement or "capuchin" in statement:
+            print "People go to the zoo and they like the lion because it's ssscary," \
+            " and the bear becausssse it's intensssse, but the monkey makessss people laugh."
+            count += 1
+        elif "elephant" in statement:
+            print "The wisssessst of animalssss."
+            count += 1
+        elif "dolphin" in statement:
+            print "If I had to come back in life, I'd come back assss a dolphin... " \
+                  "they're alwayssss smiling; they're alwaysssss playing."
+            count += 1
+        elif "tiger" in statement or "panther" in statement or "lion" in statement or "jaguar" in statement or "leopard" in statement or "cheetah" in statement or "cougar" in statement or "puma" in statement:
+            print "Big catsssss are just small catsssss with bigger teeth and clawsssss."
+            count += 1
+        elif "horse" in statement:
+            print "The wind of heaven is that which blowsssss between a horsssse's earssss."
+            count += 1
+        else:
+            print "Fasssssscinating. Beautiful creaturessss everywhere on thissss earth!"
+            count += 1
+        if count < 5:
+            print "What other animals do you like?"
+
+    print "Do you want to talk about animals more? (yes/no)"
     statement2 = raw_input("> ").lower()
     if "yes" in statement2 or "y" in statement2:
         pets()
@@ -116,30 +144,87 @@ def snakefacts():
     print "Give me a number from 1 - 20 and I'll give you a snake fact."
     while count < 5:
         statement = raw_input("> ").lower()
+        if "stop" in statement:
+            print "Alright, let'sssss try a different topic."
+            MainSelect.select()
         statement = int(statement)
-        if "20" == statement:
-            print "Snakes range in size from the tiny, 10 cm-long thread snake, " \
-            "to the reticulated python of up to 6.95 meters (22.8 ft) in length."
-        if 19 == statement:
-            print "There's an Island in Brazil where civilians are forbidden to go: it has up to 5 snakes per square meter."
-        if 18 == statement:
-            print "Snakes can have two heads and fight each other for food."
-        if 17 == statement:
-            print "The top ten deadliest snakes can be found in Australia."
-        if 16 == statement:
-            print "Snakes can open their mouth up to 150 degrees."
-        if 15 == statement:
-            print "The Titanoboa lived 60 million years ago and is the largest, "
-            "longest, and heaviest snake ever discovered."
-        if 14 == statement:
-            print "Snakes don't have eyelids."
-        if 13 == statement:
-            print "Snakes use their tongues to smell."
-        if 12 == statement:
-            print "51% of Americans fear snakes, most than any other thing in the world."
-        if 11 == statement:
-            print "There has never been snakes in Ireland because being cold-blooded, " \
-                  "snake couldn't survive the frozen ground during the ice age in the past."
-        if 10 == statement:
-            print "More than 20 snake families are currently recognized, " \
-                  "comprising about 500 genera and about 3,400 species."
+        if statement == 20:
+            print "Ssssnakes range in ssssize from the tiny, 10 cm-long thread ssssnake, " \
+            "to the reticulated python of up to 6.95 meterssss (22.8 ft) in length."
+            count += 1
+        elif 19 == statement:
+            print "There's an isssland in Brazil where civilianssss are forbidden to go: " \
+                  "it hassss up to 5 snakessss per ssssquare meter."
+            count += 1
+        elif 18 == statement:
+            print "Sssssnakes can have two headssss and fight each other for food."
+            count += 1
+        elif 17 == statement:
+            print "The top ten deadliesssst ssssnakessss can be found in Australia."
+            count += 1
+        elif 16 == statement:
+            print "Ssssnakes can open their mouth up to 150 degreessss."
+            count += 1
+        elif 15 == statement:
+            print "The Titanoboa lived 60 million yearssss ago and issss the largessst, " \
+            "longesssst, and heaviesssst ssssnake ever discovered."
+            count += 1
+        elif 14 == statement:
+            print "Ssssnakessss don't have eyelidssss."
+            count += 1
+        elif 13 == statement:
+            print "Ssssnakessss usssse their tonguessss to ssssmell."
+            count += 1
+        elif 12 == statement:
+            print "51% of Americanssss fear snakessss, most than any other thing in the world."
+            count += 1
+        elif 11 == statement:
+            print "There has never been sssssnakessss in Ireland becausssse being cold-blooded, " \
+                  "sssssnake couldn't ssssurvive the frozen ground during the ice age in the passsst."
+            count += 1
+        elif 10 == statement:
+            print "More than 20 ssssnake familiessss are currently recognized, " \
+                  "comprissssing about 500 genera and about 3,400 ssssspecies."
+            count += 1
+        elif 9 == statement:
+            print "Military commandossss in Lebanon eat live ssssnakes, " \
+                  "a tradition to dissssplay their sssstrength and daring."
+            count += 1
+        elif 8 == statement:
+            print "Ssssnakessss can ssssensssse other animalssss approaching by detecting faint vibrationssss " \
+                  "in the air and on the ground."
+            count += 1
+        elif 7 == statement:
+            print "Ssssome ssssnakessss ssssurvive for up to two yearssss without a meal."
+            count += 1
+        elif 6 == statement:
+            print "The vertebral column of ssssnakessss consistssss of anywhere between 200 to 400 vertebrae."
+            count += 1
+        elif 5 == statement:
+            print "Ophidiophobia issss the abnormal fear of snakessss."
+            count += 1
+        elif 4 == statement:
+            print "'King' in a ssssnake'sss name sssssignifies that it preys on other ssssnakessss."
+            count += 1
+        elif 3 == statement:
+            print "The decapitated head of a dead ssssnake can still bite, even hourssss after death." \
+                  " These typessss of bitessss usually contain huge amountssss of venom."
+            count += 1
+        elif 2 == statement:
+            print "The top 5 mosssst venomous ssssnakessss in the world are the inland taipan, the eassstern brown ssssnake, " \
+                  "the coasssstal taipan, the tiger ssssnake, and the black tiger ssssnake."
+            count += 1
+        elif 1 == statement:
+            print "Some ssssnakessss have over 200 teeth."
+            count += 1
+        else:
+            print "Thosssse who do not read instructions do not receive sssssnake facts."
+        if count < 5:
+            print "Put in another number for another ssssplendid sssssnake fact."
+    print "Do you want to talk about ssssnakes more? (yes/no)"
+    statement2 = raw_input("> ").lower()
+    if "yes" in statement2 or "y" in statement2:
+        snakefacts()
+    else:
+        print "Okay, let'ssss talk about something elsssse."
+        MainSelect.select()

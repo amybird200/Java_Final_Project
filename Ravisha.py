@@ -1,13 +1,14 @@
-#hello my name ravisha and I can't figure out git time to cry please let me code python okay thanks bye goodnight
 
+import random
 
 def smallTalk():
-
+    count = 0
     print "How wassssss your day?"
-    statement = raw_input("> ").lower()
+    while count <= 5:
+        statement = raw_input("> ").lower()
 
-    if "good" in statement:
-        print "Exsssssscelent... What did you do"
+        if "good" in statement:
+            print "Exsssssscelent... What did you do"
 
 
 def nonResponses():
@@ -16,8 +17,8 @@ def nonResponses():
                  "A chain iss only asss ssstrong asss itsss weakessst link", "Interessssssting...", "Wow", "A fool'ssssss paradisssssse",
                  "There'ssss a frog in my throat... Yum", "I did not underssstand", "A leopard doesssn't change itssss sspotssss... but a ssssnake sssshedsss itsss ssscalesss",
                  ]
-    ind = #random num
-
+    ind = random.randint(1, len(responses))
     print responses[ind]
+
 
 
