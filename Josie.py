@@ -125,7 +125,7 @@ def escape_room_lobby():
 
 
 boxOpen = 0
-
+knife = 0
 
 def escape_room1():  # This is a game that can be played with the chatbot where you are escaping from a room
     print "You wake up and you see that you are in a dark room. " \
@@ -145,16 +145,33 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                 state4 = raw_input("> ")
                 if "y" in state4.lower():
                     room1_note()
-                    print "Would you like to WAIT until noon or EXPLORE the room you are trapped in for a weapon?"
+                    print "You read the time, its 11:31, Would you like to WAIT until noon or " \
+                          "EXPLORE the room you are trapped in for a weapon?"
                     state5 = raw_input("> ")
                     if "explore" in state5.lower():
                         room1_explore()
                     else:
                         room1_wait()
                 else:
-                    print ""
+                    print "You pull the watch out of the box to see that it is 11:30. " \
+                          "Would you like to look around the room?"
+                    state5 = raw_input("> ")
+                    if "y" in state5.lower():
+                        room1_explore()
+                    else:
+                        "You pull out the note to read it: "
+                        room1_note()
+                        print "Would you like to WAIT until noon or EXPLORE the room you are trapped in for a weapon?"
+                        state6 = raw_input("> ")
+                        if "explore" in state6.lower():
+                            room1_explore()
+                        else:
+                            room1_wait()
             else:
-                print""
+                print "You wander around a bit noticing that there is nowhere else for the key to go. " \
+                      "As you wander around you stumble and fall hitting your head on the ground. " \
+                      "You bleed out and die."
+                room1_end()
         else:
             print "You survey the room to find a box with a lock. The key might fit there. " \
                   "Do you want to grab the key to open the box?"
@@ -173,7 +190,20 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                     else:
                         room1_wait()
                 else:
-                    print ""
+                    print "You pull the watch out of the box to see that it is 11:40. " \
+                            "Would you like to look around the room?"
+                    state5 = raw_input("> ")
+                    if "y" in state5.lower():
+                        room1_explore()
+                    else:
+                        print "You pull out the note to read it: "
+                        room1_note()
+                        print "Would you like to WAIT until noon or EXPLORE the room you are trapped in for a weapon?"
+                        state6 = raw_input("> ")
+                        if "explore" in state6.lower():
+                            room1_explore()
+                        else:
+                            room1_wait()
             else:
                 room1_explore()
     elif "n" in state1.lower():
@@ -206,12 +236,7 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                                   "Then all of the sudden you feel a slice in your arm then nothing. " \
                                   "You look at your arm and notice there is no arm. " \
                                   "You pass out as you bleed to death."
-                            print "Would you like to attempt the room again?"
-                            state7 = raw_input("> ")
-                            if "y" in state7.lower():
-                                escape_room1()
-                            else:
-                                escape_room_lobby()
+                            room1_end()
                         elif "away" in state6.lower():
                             print "You shuffle away from the wall. " \
                                   "You trip over a box this time and realize it has a lock that would fit the key " \
@@ -230,9 +255,23 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                                     else:
                                         room1_wait()
                                 else:
-                                    print ""
+                                    print "You pull the watch out of the box to see that it is 11:30. " \
+                                        "Would you like to look around the room?"
+                                    state9 = raw_input("> ")
+                                    if "y" in state9.lower():
+                                        room1_explore()
+                                    else:
+                                        print "You pull out the note to read it: "
+                                        room1_note()
+                                        print "Would you like to WAIT until noon or EXPLORE the room " \
+                                              "you are trapped in for a weapon?"
+                                        state10 = raw_input("> ")
+                                        if "explore" in state10.lower():
+                                            room1_explore()
+                                        else:
+                                            room1_wait()
                             else:
-                                print ""
+                                room1_explore()
                         else:
                             print "You fall against the wall in a moment of dizziness" \
                                   " and accidentally hit the light switch. " \
@@ -253,7 +292,21 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                                     else:
                                         room1_wait()
                                 else:
-                                    print ""
+                                    print "You pull the watch out of the box to see that it is 11:40. " \
+                                              "Would you like to look around the room?"
+                                    state9 = raw_input("> ")
+                                    if "y" in state9.lower():
+                                        room1_explore()
+                                    else:
+                                        print "You pull out the note to read it: "
+                                        room1_note()
+                                        print "Would you like to WAIT until noon or EXPLORE the room " \
+                                                  "you are trapped in for a weapon?"
+                                        state10 = raw_input("> ")
+                                        if "explore" in state10.lower():
+                                            room1_explore()
+                                        else:
+                                            room1_wait()
                             else:
                                 print "As you stare at the box you feel your vision go blurry again. " \
                                       "You need to get water soon. Maybe there is some in the box. " \
@@ -271,11 +324,56 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                                         else:
                                             room1_wait()
                                     else:
-                                        print ""
+                                        print "You pull the watch out of the box to see that it is 11:40. " \
+                                                  "Would you like to look around the room?"
+                                        state9 = raw_input("> ")
+                                        if "y" in state9.lower():
+                                            room1_explore()
+                                        else:
+                                            print "You pull out the note to read it: "
+                                            room1_note()
+                                            print "Would you like to WAIT until noon or EXPLORE the room " \
+                                                    "you are trapped in for a weapon?"
+                                            state10 = raw_input("> ")
+                                            if "explore" in state10.lower():
+                                                room1_explore()
+                                            else:
+                                                room1_wait()
                                 else:
-                                    print ""
+                                    room1_explore()
                     else:
-                        print "You flip the light switch. "
+                        print "You flip the light switch and notice that there is a skeleton and a box on the floor. " \
+                              "Do you wish to use the key to open the box?"
+                        state6 = raw_input("> ")
+                        if "y" in state6.lower():
+                            print "You open the box to find a note and a clock. Do you wish to read the note?"
+                            state7 = raw_input("> ")
+                            if "y" in state7.lower():
+                                room1_note()
+                                print "Do you wish to EXPLORE or WAIT for noon?"
+                                state9 = raw_input("> ")
+                                if "explore" in state9.lower():
+                                    room1_explore()
+                                else:
+                                    room1_wait()
+                            else:
+                                print "You pull the watch out of the box to see that it is 11:40. " \
+                                      "Would you like to look around the room?"
+                                state9 = raw_input("> ")
+                                if "y" in state9.lower():
+                                    room1_explore()
+                                else:
+                                    print "You pull out the note to read it: "
+                                    room1_note()
+                                    print "Would you like to WAIT until noon or EXPLORE the room " \
+                                          "you are trapped in for a weapon?"
+                                    state10 = raw_input("> ")
+                                    if "explore" in state10.lower():
+                                        room1_explore()
+                                    else:
+                                        room1_wait()
+                        else:
+                            room1_explore()
                 elif "away" in state4.lower():
                     print "You stumble away from the wall until you trip over a small box."
                     print "The box feels like if has a lock on it. Do you want to see if your key fits?"
@@ -291,17 +389,28 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                                 room1_explore()
                             else:
                                 room1_wait()
+                        else:
+                            print "You pull the watch out of the box to see that it is 11:30. " \
+                                    "Would you like to look around the room?"
+                            state7 = raw_input("> ")
+                            if "y" in state7.lower():
+                                room1_explore()
+                            else:
+                                print "You pull out the note to read it: "
+                                room1_note()
+                                print "Would you like to WAIT until noon or EXPLORE the room " \
+                                        "you are trapped in for a weapon?"
+                                state8 = raw_input("> ")
+                                if "explore" in state8.lower():
+                                    room1_explore()
+                                else:
+                                    room1_wait()
                     else:
-                        print ""
+                        room1_explore()
                 else:
                     print "While you hesitate you trip over the body and hit your head on the ground. " \
                           "Causing a nasty brain bleed, too bad."
-                    print "Would you like to attempt the room again?"
-                    state5 = raw_input("> ")
-                    if "y" in state5.lower():
-                        escape_room1()
-                    else:
-                        escape_room_lobby()
+                    room1_end()
             else:
                 print "You decide not to take the key and try to get up off the skeleton. " \
                       "When you push yourself up you hit your head. Your vision goes blurry. " \
@@ -311,12 +420,7 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                 if "scream" in state4.lower():
                     print "Your screaming alarms the man and he stabs you right in the chest. " \
                           "You die as your heart pumps the blood out of your body."
-                    print "Would you like to attempt the room again?"
-                    state5 = raw_input("> ")
-                    if "y" in state5.lower():
-                        escape_room1()
-                    else:
-                        escape_room_lobby()
+                    room1_end()
                 elif "run" in state4.lower():
                     print "You get up and start running for the other side of the room. " \
                           "You notice that along the walls there are many knives hanging. " \
@@ -339,41 +443,23 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                                 state8 = raw_input("> ")
                                 if "y" in state8.lower():
                                     escape_room_lobby()
+                                else:
+                                    MainSelect.select()
                             else:
                                 print "Your snake is mad that you did not hop in, " \
                                       "so it drives at you and you attempt to run away. " \
                                       "You can't run fast enough from the truck and he runs you over."
-                                print "Would you like to attempt the room again?"
-                                state8 = raw_input("> ")
-                                if "y" in state8.lower():
-                                    escape_room1()
-                                else:
-                                    escape_room_lobby()
+                                room1_end()
                         else:
                             print "Why did you not run away from the gun people? They shoot you, good job."
-                            print "Would you like to try the room again?"
-                            state7 = raw_input("> ")
-                            if "y" in state7.lower():
-                                escape_room1()
-                            else:
-                                escape_room_lobby()
+                            room1_end()
                     else:
                         print "You hesitated slightly and the man throws the knife at you. " \
                               "The knife lands squarely in your back. You fall to the ground as you bleed out."
-                        print "Would you like to attempt the room again?"
-                        state6 = raw_input("> ")
-                        if "y" in state6.lower():
-                            escape_room1()
-                        else:
-                            escape_room_lobby()
+                        room1_end()
                 else:
                     print "The man stabs you as you lie there staring at him. He watches as your body goes lifeless."
-                    print "Would you like to try again?"
-                    state5 = raw_input("> ")
-                    if "y" in state5.lower():
-                        escape_room1()
-                    else:
-                        escape_room_lobby()
+                    room1_end()
         else:
             print "You turn around to see that you tripped over a skeleton."
             print "Dangling from his neck is a small key do you take it?"
@@ -395,9 +481,23 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                         else:
                             room1_wait()
                     else:
-                        print ""
+                        print "You pull the watch out of the box to see that it is 11:30. " \
+                              "Would you like to look around the room?"
+                        state6 = raw_input("> ")
+                        if "y" in state6.lower():
+                            room1_explore()
+                        else:
+                            print "You pull out the note to read it: "
+                            room1_note()
+                            print "Would you like to WAIT until noon or EXPLORE the room " \
+                                  "you are trapped in for a weapon?"
+                            state7 = raw_input("> ")
+                            if "explore" in state7.lower():
+                                room1_explore()
+                            else:
+                                room1_wait()
                 else:
-                    print ""
+                    room1_explore()
             else:
                 print "You survey the room to find that there is a box a bit after the skeleton. " \
                       "Would you like to use the key from the skeleton's neck to open it?"
@@ -411,20 +511,30 @@ def escape_room1():  # This is a game that can be played with the chatbot where 
                         print "Do you wish to EXPLORE the room or WAIT for noon?"
                         state6 = raw_input("> ")
                         if "explore" in state6.lower():
-                            print ""
+                            room1_explore()
                         else:
-                            print ""
+                            room1_wait()
+                            print "You pull the watch out of the box to see that it is 11:30. " \
+                                  "Would you like to look around the room?"
+                            state7 = raw_input("> ")
+                            if "y" in state7.lower():
+                                room1_explore()
+                            else:
+                                print "You pull out the note to read it: "
+                                room1_note()
+                                print "Would you like to WAIT until noon or EXPLORE the room " \
+                                      "you are trapped in for a weapon?"
+                                state8 = raw_input("> ")
+                                if "explore" in state8.lower():
+                                    room1_explore()
+                                else:
+                                    room1_wait()
                 else:
                     room1_explore()
 
     else:
         print "You trip on your way to turn on the light and fall. When you fall you hit your head and die."
-        print "Would you like to try again?"
-        state2 = raw_input("> ")
-        if "y" in state2.lower():
-            escape_room1()
-        else:
-            escape_room_lobby()
+        room1_end()
 
 
 def room1_note():
@@ -442,19 +552,241 @@ def room1_explore():
         print "You continue wandering until you find a door. Do you wish to try to open the door?"
         state2 = raw_input("> ")
         if "y" in state2.lower("> "):
-            print ""
+            print "You push against the door and pull against the door to find that it's locked."
+            if boxOpen == 1:
+                print "You look at your watch to see that it is 11:45"
+            print "Would you like a knife now?"
+            state3 = raw_input("> ")
+            if "y" in state3.lower():
+                print "You pull down a nice kitchen knife that comes with a sheath you can put on your belt."
+                if boxOpen == 1:
+                    print "The time on the clock says 11:55, it's almost noon. " \
+                          "You decide to wait with your knife ready to stab the guy. " \
+                          "You are prepared for the guy and as soon as the door opens you stab and kill him."
+                else:
+                    print "You look around and wander around until the door open. " \
+                          "There is a guy with a knife that has come to bring you food. " \
+                          "You struggle with him for a bit then you eventually kill him."
+                print "Would you like to make a run down the hallway outside your room?"
+                state4 = raw_input("> ")
+                if "y" in state4.lower():
+                    print "You run through the door and " \
+                          "hear a gunshot and feel a prick in your shoulder. " \
+                          "Do you keep running down the dark hallway?"
+                    state5 = raw_input("> ")
+                    if "y" in state5.lower():
+                        print "You keep running until you see light at the end of the tunnel. " \
+                              "When you get to the end you see a truck and in the truck is your pet snake. " \
+                              "Do you hop in the truck?"
+                        state6 = raw_input("> ")
+                        if "y" in state6.lower():
+                            print "You hop in and your snake starts driving off. You have escaped!"
+                            print "Would you like to play another escape room?"
+                            state7 = raw_input("> ")
+                            if "y" in state7.lower():
+                                escape_room_lobby()
+                            else:
+                                MainSelect.select()
+                        else:
+                            print "Your snake is mad that you did not hop in, " \
+                                  "so it drives at you and you attempt to run away. " \
+                                  "You can't run fast enough from the truck and he runs you over."
+                            room1_end()
+                    else:
+                        print "Why did you not run away from the gun people? They shoot you, good job."
+                        room1_end()
+                else:
+                    print "You hesitate in the room and another guard with a gun comes in to investigate. " \
+                          "Upon seeing his dead comrade he shoots you square in the chest. "
+                    room1_end()
+            else:
+                print "The door opens and inside comes a guard with a knife. " \
+                      "He sees you near the door way and stabs you."
+                room1_end()
         else:
-            print ""
+            print "You wander back down the hallway"
+            if boxOpen == 1:
+                print "You look at your watch to see that it is 11:45"
+            print "Would you like to grab a knife now?"
+            state3 = raw_input("> ")
+            if "y" in state3.lower():
+                print "You pull down a nice kitchen knife that comes with a sheath you can put on your belt."
+                if boxOpen == 1:
+                    print "The time on the clock says 11:55, it's almost noon. " \
+                          "You decide to wait with your knife ready to stab the guy. " \
+                          "You are prepared for the guy and as soon as the door opens you stab and kill him."
+                else:
+                    print "You look around and wander around until the door open. " \
+                          "There is a guy with a knife that has come to bring you food. " \
+                          "You struggle with him for a bit then you eventually kill him."
+                print "Would you like to make a run down the hallway outside your room?"
+                state4 = raw_input("> ")
+                if "y" in state4.lower():
+                    print "You run through the door and " \
+                          "hear a gunshot and feel a prick in your shoulder. " \
+                          "Do you keep running down the dark hallway?"
+                    state5 = raw_input("> ")
+                    if "y" in state5.lower():
+                        print "You keep running until you see light at the end of the tunnel. " \
+                              "When you get to the end you see a truck and in the truck is your pet snake. " \
+                              "Do you hop in the truck?"
+                        state6 = raw_input("> ")
+                        if "y" in state6.lower():
+                            print "You hop in and your snake starts driving off. You have escaped!"
+                            print "Would you like to play another escape room?"
+                            state7 = raw_input("> ")
+                            if "y" in state7.lower():
+                                escape_room_lobby()
+                            else:
+                                MainSelect.select()
+                        else:
+                            print "Your snake is mad that you did not hop in, " \
+                                  "so it drives at you and you attempt to run away. " \
+                                  "You can't run fast enough from the truck and he runs you over."
+                            room1_end()
+                    else:
+                        print "Why did you not run away from the gun people? They shoot you, good job."
+                        room1_end()
+                else:
+                    print "You hesitate in the room and another guard with a gun comes in to investigate. " \
+                          "Upon seeing his dead comrade he shoots you square in the chest. "
+                    room1_end()
+            else:
+                print "The door opens and inside comes a guard with a knife. " \
+                      "He sees you near the door way and stabs you."
+                room1_end()
     else:
         print "You pull down a nice kitchen knife that comes with a sheath you can put on your belt."
         print "You continue to look around and find a door. " \
               "Do you want to try to open the door?"
         state2 = raw_input("> ")
         if "y" in state2.lower("> "):
-            print ""
+            print "You push against the door and pull against the door to find that it's locked. " \
+                  "You try jiggling your knife in the crack and you hear a pop that opens the door."
+            if boxOpen == 1:
+                print "You look at your watch to see that it is 11:50"
+            print "Would you like to make a run for it? "
+            state3 = raw_input("> ")
+            if "y" in state3.lower():
+                print "You run through the door and " \
+                      "hear a gunshot and feel a prick in your shoulder. " \
+                      "Do you keep running down the dark hallway?"
+                state4 = raw_input("> ")
+                if "y" in state4.lower():
+                    print "You keep running until you see light at the end of the tunnel. " \
+                          "When you get to the end you see a truck and in the truck is your pet snake. " \
+                          "Do you hop in the truck?"
+                    state5 = raw_input("> ")
+                    if "y" in state5.lower():
+                        print "You hop in and your snake starts driving off. You have escaped!"
+                        print "Would you like to play another escape room?"
+                        state6 = raw_input("> ")
+                        if "y" in state6.lower():
+                            escape_room_lobby()
+                        else:
+                            MainSelect.select()
+                    else:
+                        print "Your snake is mad that you did not hop in, " \
+                              "so it drives at you and you attempt to run away. " \
+                              "You can't run fast enough from the truck and he runs you over."
+                        room1_end()
+                else:
+                    print "Why did you not run away from the gun people? They shoot you, good job."
+                    room1_end()
+            else:
+                print "You sit down on the ground. 10 minutes later " \
+                      "the guard bringing you food notices the door is unlocked and " \
+                      "stabs you when he opens the door and sees you sitting there."
+                room1_end()
         else:
-            print ""
+            if boxOpen == 1:
+                print "You look at your watch to see that it is 11:45. You decide to wait until the guy comes. " \
+                      "You are prepared for his entrance and easily kill him. "
+            else:
+                print "You are waiting next to the door when it pops open. " \
+                          "There is a guy with a knife that has come to bring you food. " \
+                          "You struggle with him for a bit then you eventually kill him."
+                print "Would you like to make a run down the hallway outside your room?"
+                state4 = raw_input("> ")
+                if "y" in state4.lower():
+                    print "You run through the door and " \
+                          "hear a gunshot and feel a prick in your shoulder. " \
+                          "Do you keep running down the dark hallway?"
+                    state5 = raw_input("> ")
+                    if "y" in state5.lower():
+                        print "You keep running until you see light at the end of the tunnel. " \
+                              "When you get to the end you see a truck and in the truck is your pet snake. " \
+                              "Do you hop in the truck?"
+                        state6 = raw_input("> ")
+                        if "y" in state6.lower():
+                            print "You hop in and your snake starts driving off. You have escaped!"
+                            print "Would you like to play another escape room?"
+                            state7 = raw_input("> ")
+                            if "y" in state7.lower():
+                                escape_room_lobby()
+                            else:
+                                MainSelect.select()
+                        else:
+                            print "Your snake is mad that you did not hop in, " \
+                                  "so it drives at you and you attempt to run away. " \
+                                  "You can't run fast enough from the truck and he runs you over."
+                            room1_end()
+                    else:
+                        print "Why did you not run away from the gun people? They shoot you, good job."
+                        room1_end()
+                else:
+                    print "You hesitate in the room and another guard with a gun comes in to investigate. " \
+                          "Upon seeing his dead comrade he shoots you square in the chest. "
+                    room1_end()
 
 
 def room1_wait():
-    print ""
+    if boxOpen == 1:
+        print "You look at the clock to see that it is 11:45. At noon the door pops open " \
+              "and the guy that comes in has a knife. Since you were prepared for his arrival " \
+              "you are able to slip out the door behind him would you like to?"
+        state1 = raw_input("> ")
+        state5 = raw_input("> ")
+        if "y" in state5.lower():
+            print "You run through the door and as you break the plane of the door you " \
+                  "hear a gunshot and feel a prick in your shoulder. " \
+                  "You keep running down the dark tunnel. Do you keep running?"
+            state6 = raw_input("> ")
+            if "y" in state6.lower():
+                print "You keep running until you see light at the end of the tunnel. " \
+                      "When you get to the end you see a truck and in the truck is your pet snake. " \
+                      "Do you hop in the truck?"
+                state7 = raw_input("> ")
+                if "y" in state7.lower():
+                    print "You hop in and your snake starts driving off. You have escaped!"
+                    print "Would you like to play another escape room?"
+                    state8 = raw_input("> ")
+                    if "y" in state8.lower():
+                        escape_room_lobby()
+                    else:
+                        MainSelect.select()
+                else:
+                    print "Your snake is mad that you did not hop in, " \
+                          "so it drives at you and you attempt to run away. " \
+                          "You can't run fast enough from the truck and he runs you over."
+                    room1_end()
+            else:
+                print "Why did you not run away from the gun people? They shoot you, good job."
+                room1_end()
+        else:
+            print "You hesitated slightly and the man notices you trying to escape. He throws his knife at you. " \
+                  "The knife lands squarely in your back. You fall to the ground as you bleed out."
+            room1_end()
+    else:
+        print "You sit down next to the wall to wait. The door opens catching you by surprise. " \
+              "There is a man with a knife. Because of your surprise he is able to easily over take you and stab you."
+        room1_end()
+
+
+def room1_end():
+    print "Would you like to attempt the room again?"
+    state1 = raw_input("> ")
+    if "y" in state1.lower():
+        escape_room1()
+    else:
+        escape_room_lobby()
