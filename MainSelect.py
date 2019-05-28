@@ -30,6 +30,6 @@ def select():
     if "yes" in confirm.lower() or "y" in confirm.lower():
         Josie.escape_room_lobby()
     else:
-        print "Okay, we'll talk another time then."
+        Ravisha.smallTalk()
 
 
