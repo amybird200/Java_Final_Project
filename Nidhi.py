@@ -103,16 +103,33 @@ def pets():
             print "Sssslow and sssssteady winssss the race."
             count += 1
         elif "whale" in statement:
-            print "The giants of the water."
+            print "The giantsssss of the water."
+            count += 1
         elif "shark" in statement:
-            print "Sharks aren't the monsters we make them out to be."
-        elif "monkey" in statement:
-            print ""
+            print "Sssssharks aren't the monstersssss we make them out to be."
+            count += 1
+        elif "monkey" in statement or "chimp" in statement or "orangutan" in statement or "baboon" in statement or "gorrillas" in statement or "howler" in statement or "gibbons" in statement or "capuchin" in statement:
+            print "People go to the zoo and they like the lion because it's ssscary," \
+            " and the bear becausssse it's intensssse, but the monkey makessss people laugh."
+            count += 1
+        elif "elephant" in statement:
+            print "The wisssessst of animalssss."
+            count += 1
+        elif "dolphin" in statement:
+            print "If I had to come back in life, I'd come back assss a dolphin... " \
+                  "they're alwayssss smiling; they're alwaysssss playing."
+            count += 1
+        elif "tiger" in statement or "panther" in statement or "lion" in statement or "jaguar" in statement or "leopard" in statement or "cheetah" in statement or "cougar" in statement or "puma" in statement:
+            print "Big catsssss are just small catsssss with bigger teeth and clawsssss."
+            count += 1
+        elif "horse" in statement:
+            print "The wind of heaven is that which blowsssss between a horsssse's earssss."
+            count += 1
         else:
-            print "Fasssssscinating. I hope it doessssn't bite!"
+            print "Fasssssscinating. Beautiful creaturessss everywhere on thissss earth!"
             count += 1
         print "What other animals do you like?"
-    print "Do you want to talk about your petsssss more? (yes/no)"
+    print "Do you want to talk about animals more? (yes/no)"
     statement2 = raw_input("> ").lower()
     if "yes" in statement2 or "y" in statement2:
         pets()
