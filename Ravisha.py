@@ -8,7 +8,7 @@ def smallTalk():
     statement = raw_input("> ").lower()
 
     if "good" in statement:
-        print "Exsssssscelent... What did you do"
+        print "Exsssssscelent... What did you do?"
 
 
 def nonResponses():

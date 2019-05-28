@@ -102,8 +102,12 @@ def pets():
         elif "turtles" in statement:
             print "Sssslow and sssssteady winssss the race."
             count += 1
-        elif "whales" in statement:
+        elif "whale" in statement:
             print "The giants of the water."
+        elif "shark" in statement:
+            print "Sharks aren't the monsters we make them out to be."
+        elif "monkey" in statement:
+            print ""
         else:
             print "Fasssssscinating. I hope it doessssn't bite!"
             count += 1

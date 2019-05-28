@@ -9,14 +9,8 @@ question = question.lower()
 while "bye" not in question:
 
     if "hello" in question or "hi" in question or "hey" in question:
-        print "Hello human"
-
-    elif "fuck" in question:
-        print "That'sssss not nice :("
-
-    elif "day" and "how" in question:
-        print "My day issss going good, I made a new friend today. What about your day?"
-        statement = raw_input("> ")
+        print "Hello human. How are you?"
+        statement = raw_input("> ").lower()
         if "good" in statement.lower():
             print "That issss good, I'm glad I could be here for it."
             print "Do you want to talk about something?"
@@ -26,7 +20,7 @@ while "bye" not in question:
         elif "bad" in statement.lower() or "not" in statement.lower() or "meh" in statement.lower():
             print "Oh no, can I make your day better?"
             confirm = raw_input("> ")
-            if "yes" in confirm.lower() or "y" in confirm.lower():
+            if "yes" in confirm.lower() or "y" in confirm.lower() or "sure" in confirm.lower():
                 MainSelect.select()
             else:
                 print "Whelp :("
