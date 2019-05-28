@@ -129,6 +129,7 @@ def pets():
             print "Fasssssscinating. Beautiful creaturessss everywhere on thissss earth!"
             count += 1
         print "What other animals do you like?"
+
     print "Do you want to talk about animals more? (yes/no)"
     statement2 = raw_input("> ").lower()
     if "yes" in statement2 or "y" in statement2:
