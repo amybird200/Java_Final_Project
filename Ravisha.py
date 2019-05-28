@@ -16,7 +16,7 @@ def nonResponses():
                  "A chain iss only asss ssstrong asss itsss weakessst link", "Interessssssting...", "Wow", "A fool'ssssss paradisssssse",
                  "There'ssss a frog in my throat... Yum", "I did not underssstand", "A leopard doesssn't change itssss sspotssss... but a ssssnake sssshedsss itsss ssscalesss",
                  ]
-    ind = #random num
+#    ind = #random num
 
     print responses[ind]
 
