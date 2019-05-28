@@ -113,10 +113,14 @@ def escape_room_lobby():
     state1 = raw_input("> ")
     if "play" in state1.lower():
         print "press 1 to play Kidnapping"
+        print "press 2 to play Numbers"
         state2 = raw_input("> ")
         if "1" in state2.lower():
             print "You wake up in a dark room. Will you escape alive? Will you trust your only ally?"
             escape_room1()
+        elif "2" in state2.lower():
+            print "Guess the number to escape."
+            escape_room2()
     elif "help" in state1.lower():
         escape_room_rules()
     else:
@@ -125,7 +129,7 @@ def escape_room_lobby():
 
 
 boxOpen = 0
-knife = 0
+
 
 def escape_room1():  # This is a game that can be played with the chatbot where you are escaping from a room
     print "You wake up and you see that you are in a dark room. " \
@@ -788,5 +792,23 @@ def room1_end():
     state1 = raw_input("> ")
     if "y" in state1.lower():
         escape_room1()
+    else:
+        escape_room_lobby()
+
+
+def escape_room2():
+    num = 50  # Random Number generator
+    while guess != num:
+        guess = raw_input("Guess a number between 1 and 100: ")
+        if (guess > num):
+            print "Your guess is too high!"
+        elif (guess < num):
+            print "Your guess is too low!"
+        else:
+            print "You got it!!!"
+    print "Would you like to play again?"
+    state1 = raw_input("> ")
+    if "y" in state1.lower():
+        escape_room2()
     else:
         escape_room_lobby()
