@@ -157,13 +157,13 @@ def snakefacts():
                   "it hassss up to 5 snakessss per ssssquare meter."
             count += 1
         elif 18 == statement:
-            print "Sssssnakes can have two headssss and fight each other for food."
+            print "Sssssnakessss can have two headssss and fight each other for food."
             count += 1
         elif 17 == statement:
             print "The top ten deadliesssst ssssnakessss can be found in Australia."
             count += 1
         elif 16 == statement:
-            print "Ssssnakes can open their mouth up to 150 degreessss."
+            print "Ssssnakessss can open their mouth up to 150 degreessss."
             count += 1
         elif 15 == statement:
             print "The Titanoboa lived 60 million yearssss ago and issss the largessst, " \
@@ -184,10 +184,10 @@ def snakefacts():
             count += 1
         elif 10 == statement:
             print "More than 20 ssssnake familiessss are currently recognized, " \
-                  "comprissssing about 500 genera and about 3,400 ssssspecies."
+                  "comprissssing about 500 genera and about 3,400 ssssspeciessss."
             count += 1
         elif 9 == statement:
-            print "Military commandossss in Lebanon eat live ssssnakes, " \
+            print "Military commandossss in Lebanon eat live ssssnakessss, " \
                   "a tradition to dissssplay their sssstrength and daring."
             count += 1
         elif 8 == statement:
@@ -201,10 +201,10 @@ def snakefacts():
             print "The vertebral column of ssssnakessss consistssss of anywhere between 200 to 400 vertebrae."
             count += 1
         elif 5 == statement:
-            print "Ophidiophobia issss the abnormal fear of snakessss."
+            print "Ophidiophobia issss the abnormal fear of ssssnakessss."
             count += 1
         elif 4 == statement:
-            print "'King' in a ssssnake'sss name sssssignifies that it preys on other ssssnakessss."
+            print "'King' in a ssssnake'sss name sssssignifiessss that it preys on other ssssnakessss."
             count += 1
         elif 3 == statement:
             print "The decapitated head of a dead ssssnake can still bite, even hourssss after death." \
@@ -215,10 +215,10 @@ def snakefacts():
                   "the coasssstal taipan, the tiger ssssnake, and the black tiger ssssnake."
             count += 1
         elif 1 == statement:
-            print "Some ssssnakessss have over 200 teeth."
+            print "Ssssome ssssnakessss have over 200 teeth."
             count += 1
         else:
-            print "Thosssse who do not read instructions do not receive sssssnake facts."
+            print "Thosssse who do not read instructionssss do not receive sssssnake facts."
         if count < 5:
             print "Put in another number for another ssssplendid sssssnake fact."
     print "Do you want to talk about ssssnakes more? (yes/no)"
