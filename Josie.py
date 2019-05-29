@@ -120,6 +120,7 @@ def escape_room_lobby():
         print "press 1 to play Kidnapping"
         print "press 2 to play Numbers"
         print "press 3 to play Hangman"
+        print "press 4 to play Farkle"
         state2 = raw_input("> ")
         if "1" in state2.lower():
             print "You wake up in a dark room. Will you escape alive? Will you trust your only ally?"
@@ -130,6 +131,8 @@ def escape_room_lobby():
         elif "3" in state2.lower():
             print "Guess the secret word to escape the abyss."
             escape_room3()
+        elif "4" in state2.lower():
+            print "Get 5000 Points to escape."
     elif "help" in state1.lower():
         escape_room_rules()
     else:
@@ -802,6 +805,15 @@ def room1_end():
         escape_room_lobby()
 
 
+def room4_end():
+    print "Would you like to play again?"
+    state1 = raw_input("> ")
+    if "y" in state1.lower():
+        escape_room4()
+    else:
+        escape_room_lobby()
+
+
 def escape_room2():
     num = random.randint(1, 100)  # Random Number generator
     print "In order to escape you need to find my number. " \
@@ -890,7 +902,112 @@ def escape_room4():
     while points <= 5000:
         roll = [dice(), dice(), dice(), dice(), dice(), dice()]
         print roll
+        change = 0
+        print "Select the position of the dice you wish to keep (1-6) seperated by a comma. " \
+              "For example [1, 1, 5, 4, 6, 2] to keep the ones and five you would type 1, 2, 3"
+        pos = raw_input("> ")
+        count2 = 0
+        count3 = 0
+        count4 = 0
+        count6 = 0
+        if "1" in pos:
+            if room4_score(roll[0]) > 0:
+                change += room4_score(roll[0])
+            else:
+                if roll[0] == 2:
+                    count2 += 1
+                elif roll[0] == 3:
+                    count3 += 1
+                elif roll[0] == 4:
+                    count4 += 1
+                elif roll[0] == 6:
+                    count6 += 1
+        if "2" in pos:
+            if room4_score(roll[1]) > 0:
+                change += room4_score(roll[1])
+            else:
+                if roll[1] == 2:
+                    count2 += 1
+                elif roll[1] == 3:
+                    count3 += 1
+                elif roll[1] == 4:
+                    count4 += 1
+                elif roll[1] == 6:
+                    count6 += 1
+        if "3" in pos:
+            if room4_score(roll[2]) > 0:
+                change += room4_score(roll[2])
+            else:
+                if roll[2] == 2:
+                    count2 += 1
+                elif roll[2] == 3:
+                    count3 += 1
+                elif roll[2] == 4:
+                    count4 += 1
+                elif roll[2] == 6:
+                    count6 += 1
+        if "4" in pos:
+            if room4_score(roll[3]) > 0:
+                change += room4_score(roll[3])
+            else:
+                if roll[3] == 2:
+                    count2 += 1
+                elif roll[3] == 3:
+                    count3 += 1
+                elif roll[3] == 4:
+                    count4 += 1
+                elif roll[3] == 6:
+                    count6 += 1
+        if "5" in pos:
+            if room4_score(roll[4]) > 0:
+                change += room4_score(roll[4])
+            else:
+                if roll[4] == 2:
+                    count2 += 1
+                elif roll[4] == 3:
+                    count3 += 1
+                elif roll[4] == 4:
+                    count4 += 1
+                elif roll[4] == 6:
+                    count6 += 1
+        if "6" in pos:
+            if room4_score(roll[5]) > 0:
+                change += room4_score(roll[5])
+            else:
+                if roll[5] == 2:
+                    count2 += 1
+                elif roll[5] == 3:
+                    count3 += 1
+                elif roll[5] == 4:
+                    count4 += 1
+                elif roll[5] == 6:
+                    count6 += 1
+        if count2 >= 3:
+            change += 200 * (count2 - 2)
+        if count3 >= 3:
+            change += 300 * (count3 - 2)
+        if count4 >= 3:
+            change += 400 * (count4 - 2)
+        if count6 >= 3:
+            change += 600 * (count6 - 2)
+        if change == 0:
+            print "You have farkled"
+            room4_end()
+        points += change
+        print "Your score is: " % points
+    print "You have rolled enough points to escape."
+    escape_room_lobby()
 
 
 def dice():
-    return random.randint(1,6)
+    return random.randint(1, 6)
+
+
+def room4_score(num):
+
+    if num == 1:
+        return 100
+    elif num == 5:
+        return 50
+    else:
+        return 0
