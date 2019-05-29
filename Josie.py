@@ -883,3 +883,14 @@ def escape_room3():
         if turns == 0:
             # print "You Loose"
             print "You Loose and will remain in the abyss forever!!!!"
+
+
+def escape_room4():
+    points = 0
+    while points <= 5000:
+        roll = [dice(), dice(), dice(), dice(), dice(), dice()]
+        print roll
+
+
+def dice():
+    return random.randint(1,6)
