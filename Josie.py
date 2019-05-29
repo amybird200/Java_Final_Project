@@ -1,4 +1,6 @@
 import MainSelect
+import random
+import time
 
 
 def family():  # This is to talk about your family
@@ -110,12 +112,14 @@ def escape_room_rules():
 
 
 def escape_room_lobby():
+    print "I'm going to hand thingssss off to my owner ssssso you can underssssstand."
     print "Welcome to the lobby of escape rooms. If you want to play type PLAY, " \
           "or you can type HELP for instructions. Otherwise it will quit back to main select."
     state1 = raw_input("> ")
     if "play" in state1.lower():
         print "press 1 to play Kidnapping"
         print "press 2 to play Numbers"
+        print "press 3 to play Hangman"
         state2 = raw_input("> ")
         if "1" in state2.lower():
             print "You wake up in a dark room. Will you escape alive? Will you trust your only ally?"
@@ -123,6 +127,9 @@ def escape_room_lobby():
         elif "2" in state2.lower():
             print "Guess the number to escape."
             escape_room2()
+        elif "3" in state2.lower():
+            print "Guess the secret word to escape the abyss."
+            escape_room3()
     elif "help" in state1.lower():
         escape_room_rules()
     else:
@@ -796,7 +803,7 @@ def room1_end():
 
 
 def escape_room2():
-    num = 50  # Random Number generator
+    num = random.randint(1, 100)  # Random Number generator
     print "In order to escape you need to find my number. " \
           "Once you have found my number I will let you out of your confines. "
     guess = raw_input("Enter Your number on the pad \n> ")
@@ -816,3 +823,63 @@ def escape_room2():
         escape_room2()
     else:
         escape_room_lobby()
+
+
+def escape_room3():
+    # wait for 1 second
+    time.sleep(1)
+    print "Start guessing..."
+    time.sleep(0.5)
+
+    # here we set the secret
+    word = "secret"
+
+    # creates an variable with an empty value
+    guesses = ''
+
+    # determine the number of turns
+    turns = 10
+
+    # Create a while loop
+
+    # check if the turns are more than zero
+    while turns > 0:
+        # make a counter that starts with zero
+        failed = 0
+        # for every character in secret_word
+        for char in word:
+            # see if the character is in the players guess
+            if char in guesses:
+                # print then out the character
+                print char,
+            else:
+                # if not found, print a dash
+                print "_",
+                # and increase the failed counter with one
+                failed += 1
+        # if failed is equal to zero
+        # print You Won
+        if failed == 0:
+            print "You won and you get to escape"
+            # exit the script
+            break
+        # ask the user go guess a character
+        guess = raw_input("guess a character:")
+
+        # set the players guess to guesses
+        guesses += guess
+
+        # if the guess is not found in the secret word
+        if guess not in word:
+            # turns counter decreases with 1 (now 9)
+            turns -= 1
+            # print wrong
+            print "Wrong"
+
+        # how many turns are left
+        print "You have", + turns, 'more guesses'
+
+        # if the turns are equal to zero
+        if turns == 0:
+            # print "You Loose"
+            print "You Loose and will remain in the abyss forever!!!!"
