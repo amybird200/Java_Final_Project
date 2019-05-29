@@ -133,6 +133,7 @@ def escape_room_lobby():
             escape_room3()
         elif "4" in state2.lower():
             print "Get 5000 Points to escape."
+            escape_room4()
     elif "help" in state1.lower():
         escape_room_rules()
     else:
@@ -994,7 +995,7 @@ def escape_room4():
             print "You have farkled"
             room4_end()
         points += change
-        print "Your score is: " % points
+        print "Your score is: %d" % points
     print "You have rolled enough points to escape."
     escape_room_lobby()
 
