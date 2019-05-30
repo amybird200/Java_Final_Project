@@ -1,7 +1,7 @@
 
 import MainSelect
 
-def hobbies():
+def hobbies(): #gives responses to different hobby types, including sports and the arts
     count = 0
     print "What are your hobbiesssss? Sportsss? Perhapssss the artsss?"
     while count <= 5:
@@ -9,7 +9,6 @@ def hobbies():
         if "stop" in statement:
             print "Alright, let'sssss try a different topic."
             MainSelect.select()
-            # change later to go back to mainSelectMenu
         elif "soccer" in statement:
             print "Goooooooooooooaaaaaaalllll!!!"
             count += 1
@@ -61,16 +60,18 @@ def hobbies():
         elif "photography" in statement or "photo" in statement:
             print "A picture issss worth a thoussssand wordssss."
         else:
-            print "That'ssssss interesting. Anything elsssse?"
+            print "That'ssssss interesting... Sssoundssss fun!"
             count += 1
-    print "Do you want to talk about your hobbiessss more? (yes/no)"
+        if count < 5:
+            print "What other hobbiessss do you enjoy?"
+    print "Do you want to talk about your hobbiessss more? (yes/no)" #asks if user wants to continue talking about hobbies after 5 sentences
     statement2 = raw_input("> ").lower()
     if "yes" in statement2 or "y" in statement2:
         hobbies()
     else:
-        print "Okay, let'ssss talk about something else."
+        print "Okay, let'ssss talk about something elsssse."
 
-def pets():
+def animals(): #gives responses about different animals that the user talks about
     count = 0
     print "What are your favorite animals?"
     while count < 5:
@@ -129,9 +130,9 @@ def pets():
             print "Fasssssscinating. Beautiful creaturessss everywhere on thissss earth!"
             count += 1
         if count < 5:
-            print "What other animals do you like?"
+            print "What other animalssss do you like?"
 
-    print "Do you want to talk about animals more? (yes/no)"
+    print "Do you want to talk about animals more? (yes/no)" #asks if user wants to continue talking about animals after 5 sentences
     statement2 = raw_input("> ").lower()
     if "yes" in statement2 or "y" in statement2:
         pets()
@@ -139,9 +140,9 @@ def pets():
         print "Okay, let'ssss talk about something elsssse."
         MainSelect.select()
 
-def snakefacts():
+def snakefacts(): #user puts in a number from 1-20 and Snakebot gives out a snake fact
     count = 0
-    print "Give me a number from 1 - 20 and I'll give you a snake fact."
+    print "Give me an integer from 1 - 20 and I'll give you a sssssnake fact."
     while count < 5:
         statement = raw_input("> ").lower()
         if "stop" in statement:
@@ -157,13 +158,13 @@ def snakefacts():
                   "it hassss up to 5 snakessss per ssssquare meter."
             count += 1
         elif 18 == statement:
-            print "Sssssnakes can have two headssss and fight each other for food."
+            print "Sssssnakessss can have two headssss and fight each other for food."
             count += 1
         elif 17 == statement:
             print "The top ten deadliesssst ssssnakessss can be found in Australia."
             count += 1
         elif 16 == statement:
-            print "Ssssnakes can open their mouth up to 150 degreessss."
+            print "Ssssnakessss can open their mouth up to 150 degreessss."
             count += 1
         elif 15 == statement:
             print "The Titanoboa lived 60 million yearssss ago and issss the largessst, " \
@@ -184,10 +185,10 @@ def snakefacts():
             count += 1
         elif 10 == statement:
             print "More than 20 ssssnake familiessss are currently recognized, " \
-                  "comprissssing about 500 genera and about 3,400 ssssspecies."
+                  "comprissssing about 500 genera and about 3,400 ssssspeciessss."
             count += 1
         elif 9 == statement:
-            print "Military commandossss in Lebanon eat live ssssnakes, " \
+            print "Military commandossss in Lebanon eat live ssssnakessss, " \
                   "a tradition to dissssplay their sssstrength and daring."
             count += 1
         elif 8 == statement:
@@ -201,10 +202,10 @@ def snakefacts():
             print "The vertebral column of ssssnakessss consistssss of anywhere between 200 to 400 vertebrae."
             count += 1
         elif 5 == statement:
-            print "Ophidiophobia issss the abnormal fear of snakessss."
+            print "Ophidiophobia issss the abnormal fear of ssssnakessss."
             count += 1
         elif 4 == statement:
-            print "'King' in a ssssnake'sss name sssssignifies that it preys on other ssssnakessss."
+            print "'King' in a ssssnake'sss name sssssignifiessss that it preys on other ssssnakessss."
             count += 1
         elif 3 == statement:
             print "The decapitated head of a dead ssssnake can still bite, even hourssss after death." \
@@ -215,13 +216,13 @@ def snakefacts():
                   "the coasssstal taipan, the tiger ssssnake, and the black tiger ssssnake."
             count += 1
         elif 1 == statement:
-            print "Some ssssnakessss have over 200 teeth."
+            print "Ssssome ssssnakessss have over 200 teeth."
             count += 1
         else:
-            print "Thosssse who do not read instructions do not receive sssssnake facts."
+            print "Thosssse who do not read instructionssss do not receive sssssnake facts."
         if count < 5:
-            print "Put in another number for another ssssplendid sssssnake fact."
-    print "Do you want to talk about ssssnakes more? (yes/no)"
+            print "Put in another integer from 1 - 20 for another ssssplendid sssssnake fact."
+    print "Do you want to talk about ssssnakes more? (yes/no)" #asks if user wants to continue talking about snake facts after 5 sentences
     statement2 = raw_input("> ").lower()
     if "yes" in statement2 or "y" in statement2:
         snakefacts()
