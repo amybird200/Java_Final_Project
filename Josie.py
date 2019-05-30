@@ -560,7 +560,7 @@ def room1_explore(open):
     if "n" in state1.lower():
         print "You continue wandering until you find a door. Do you wish to try to open the door?"
         state2 = raw_input("> ")
-        if "y" in state2.lower("> "):
+        if "y" in state2.lower():
             print "You push against the door and pull against the door to find that it's locked."
             if box_open >= 1:
                 print "You look at your watch to see that it is 11:45"
