@@ -22,7 +22,7 @@ def select():
     print "Would you like to talk about animals?"
     confirm = raw_input("> ")
     if "yes" in confirm.lower() or "y" in confirm.lower():
-        Nidhi.pets()
+        Nidhi.animals()
     print "Would you like to hear snake facts?"
     confirm = raw_input("> ")
     if "yes" in confirm.lower() or "y" in confirm.lower():
