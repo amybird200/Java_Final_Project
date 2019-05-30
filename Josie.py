@@ -560,7 +560,7 @@ def room1_explore(open):
     if "n" in state1.lower():
         print "You continue wandering until you find a door. Do you wish to try to open the door?"
         state2 = raw_input("> ")
-        if "y" in state2.lower("> "):
+        if "y" in state2.lower():
             print "You push against the door and pull against the door to find that it's locked."
             if box_open >= 1:
                 print "You look at your watch to see that it is 11:45"
@@ -823,14 +823,13 @@ def escape_room2():
             print "Your guess is too low!"
         else:
             print "You got it!!! You are free to go."
+            print "Would you like to play again?"
+            state1 = raw_input("> ")
+            if "y" in state1.lower():
+                escape_room2()
+            else:
+                escape_room_lobby()
         guess = raw_input("Enter Your number on the pad \n> ")
-
-    print "Would you like to play again?"
-    state1 = raw_input("> ")
-    if "y" in state1.lower():
-        escape_room2()
-    else:
-        escape_room_lobby()
 
 
 def escape_room3():
