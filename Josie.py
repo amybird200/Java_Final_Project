@@ -823,14 +823,13 @@ def escape_room2():
             print "Your guess is too low!"
         else:
             print "You got it!!! You are free to go."
+            print "Would you like to play again?"
+            state1 = raw_input("> ")
+            if "y" in state1.lower():
+                escape_room2()
+            else:
+                escape_room_lobby()
         guess = raw_input("Enter Your number on the pad \n> ")
-
-    print "Would you like to play again?"
-    state1 = raw_input("> ")
-    if "y" in state1.lower():
-        escape_room2()
-    else:
-        escape_room_lobby()
 
 
 def escape_room3():
