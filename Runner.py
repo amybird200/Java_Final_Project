@@ -2,20 +2,20 @@
 import MainSelect
 import Detect
 
-print "Hello I am Sssssnake bot, I like to chat with humanssss."
-print "Assssk me a question or make a sssstatement."
+print "I am Sssssnake bot, I like to chat with humanssss."
+print "Hello!"
 question = raw_input("> ")
 question = question.lower()
 
 while "bye" not in question:
 
     if "hello" in question or "hi" in question or "hey" in question:
-        print "Hello human. How are you?"
+        print "How are you?"
         statement = raw_input("> ").lower()
 
         if Detect.yesResponses(statement):
             print "That issss good, I'm glad I could be here for it."
-            print "Do you want to talk about something?"
+            print "Do you want to talk about ssssomething?"
             statement = raw_input("> ").lower()
             if Detect.yesResponses(statement):
                 MainSelect.select()

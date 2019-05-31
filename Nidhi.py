@@ -66,7 +66,7 @@ def hobbies(): #gives responses to different hobby types, including sports and t
             print "What other hobbiessss do you enjoy?"
     print "Do you want to talk about your hobbiessss more? (yes/no)" #asks if user wants to continue talking about hobbies after 5 sentences
     statement2 = raw_input("> ").lower()
-    if "yes" in statement2 or "y" in statement2:
+    if Detect.yesResponses(statement2):
         hobbies()
     else:
         print "Okay, let'ssss talk about something elsssse."
@@ -134,7 +134,7 @@ def animals(): #gives responses about different animals that the user talks abou
 
     print "Do you want to talk about animals more? (yes/no)" #asks if user wants to continue talking about animals after 5 sentences
     statement2 = raw_input("> ").lower()
-    if "yes" in statement2 or "y" in statement2:
+    if Detect.yesResponses(statement2):
         pets()
     else:
         print "Okay, let'ssss talk about something elsssse."
@@ -224,7 +224,7 @@ def snakefacts(): #user puts in a number from 1-20 and Snakebot gives out a snak
             print "Put in another integer from 1 - 20 for another ssssplendid sssssnake fact."
     print "Do you want to talk about ssssnakes more? (yes/no)" #asks if user wants to continue talking about snake facts after 5 sentences
     statement2 = raw_input("> ").lower()
-    if "yes" in statement2 or "y" in statement2:
+    if Detect.yesResponses(statement2):
         snakefacts()
     else:
         print "Okay, let'ssss talk about something elsssse."
