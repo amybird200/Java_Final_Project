@@ -1,24 +1,49 @@
 
-import random
+import Detect
+import MainSelect
 
 def smallTalk():
+
     count = 0
-    print "How wassssss your day?"
+    print "Tell me ssssomething."
     while count <= 5:
         statement = raw_input("> ").lower()
 
-        if "good" in statement:
-            print "Exsssssscelent... What did you do"
+        if "stop" in statement or "bye" in statement:
+            print "Letssss talk about ssssomething elsssssse."
+            MainSelect.select()
+        elif "ok" in statement:
+            Detect.convoStarters()
+        elif "how" in statement and "you" in statement:
+            print "I'm doing good, how are you?"
+            count += 1
+        elif "good" in statement:
+            print "I am glad."
+            count += 1
+        elif "bad" in statement:
+            print "Aww. :( Why isssss that?"
+            count += 1
+        elif "what" in statement and "name" in statement:
+            print "Can't you read!!! my name is Ssssssnakebot. \tWhat'ssss your name??"
+            count += 1
+        else:
+            Detect.nonResponses()
+
+    print "Do you want to keep talking?"
+    if Detect.yesResponses(statement):
+        count = 0
+        smallTalk()
+    else:
+        "Okay. Letsssss try ssssomething elsssse."
+        MainSelect.select()
 
 
-def nonResponses():
 
-    responses = ["Hmmm", "Tell me more", "Oh?", "Jussst like a bull in a china ssshop...\n...or maybe a ssssnake",
-                 "A chain iss only asss ssstrong asss itsss weakessst link", "Interessssssting...", "Wow", "A fool'ssssss paradisssssse",
-                 "There'ssss a frog in my throat... Yum", "I did not underssstand", "A leopard doesssn't change itssss sspotssss... but a ssssnake sssshedsss itsss ssscalesss",
-                 ]
-    ind = random.randint(1, len(responses))
-    print responses[ind]
+
+
+
+
+
 
 
 

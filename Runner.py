@@ -1,34 +1,37 @@
 
 import MainSelect
 import Detect
+import Ravisha
 
-print "Hello I am Sssssnake bot, I like to chat with humanssss."
-print "Assssk me a question or make a sssstatement."
+print "I am Sssssnake bot, I like to chat with humanssss."
+print "Hello!"
 question = raw_input("> ")
 question = question.lower()
 
 while "bye" not in question:
 
     if "hello" in question or "hi" in question or "hey" in question:
-        print "Hello human. How are you?"
+        print "How are you?"
         statement = raw_input("> ").lower()
 
         if Detect.yesResponses(statement):
             print "That issss good, I'm glad I could be here for it."
-            print "Do you want to talk about something?"
+            print "Do you want to talk about ssssomething?"
             statement = raw_input("> ").lower()
             if Detect.yesResponses(statement):
                 MainSelect.select()
+            else:
+                print "Okay, we'll talk later then. Sssssee ya."
+
         elif "bad" in statement.lower() or "not" in statement.lower() or "meh" in statement.lower():
             print "Oh no, can I make your day better?"
             confirm = raw_input("> ")
             if Detect.yesResponses(confirm):
-                #"yes" in confirm.lower() or "y" in confirm.lower() or "sure" in confirm.lower():
                 MainSelect.select()
             else:
-                print "Whelp :(" #smallTalk
+                Ravisha.smallTalk()
     else:
-        print "I do not understand that Englissssh"
+        Detect.nonResponses()
         print "Assssk me a question or make a sssstatement. Or ssssay goodbye to exit."
 
     question = raw_input("> ")
