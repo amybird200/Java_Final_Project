@@ -23,7 +23,7 @@ while "bye" not in question:
             print "Oh no, can I make your day better?"
             confirm = raw_input("> ")
             if Detect.yesResponses(confirm):
-                #"yes" in confirm.lower() or "y" in confirm.lower() or "sure" in confirm.lower():
+
                 MainSelect.select()
             else:
                 print "Whelp :(" #smallTalk
