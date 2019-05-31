@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://github.com/amybird200/Java_Final_Project",
     packages=setuptools.find_packages(),
     classifiers=[
-        "Programming Language :: Python :: 2.8",
+        "Programming Language :: Python :: 2.7",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],

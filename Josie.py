@@ -801,6 +801,15 @@ def room1_end():
         escape_room_lobby()
 
 
+def room3_end():
+    print "Would you like to play again?"
+    state1 = raw_input("> ")
+    if "y" in state1.lower():
+        escape_room3()
+    else:
+        escape_room_lobby()
+
+
 def room4_end():
     print "Would you like to play again?"
     state1 = raw_input("> ")
@@ -869,7 +878,7 @@ def escape_room3():
         if failed == 0:
             print "You won and you get to escape"
             # exit the script
-            break
+            room3_end()
         # ask the user go guess a character
         guess = raw_input("guess a character:")
 
@@ -890,6 +899,7 @@ def escape_room3():
         if turns == 0:
             # print "You Loose"
             print "You Loose and will remain in the abyss forever!!!!"
+            room3_end()
 
 
 def escape_room4():
