@@ -3,8 +3,6 @@ import Josie
 import Ravisha
 import Detect
 
-
-
 def select():
     print "Would you like to talk about your family?"
     confirm = raw_input("> ")

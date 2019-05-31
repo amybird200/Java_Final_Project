@@ -11,7 +11,7 @@ def family():  # This is to talk about your family
         if "stop" in statement:
             print "Alright, let'sssss try a different topic."
             MainSelect.select()
-            # change later to go back to mainSelectMenu
+
         elif "mom" in statement or "mother" in statement:
             print "The apple doessss not fall far from the tree."
             count += 1
