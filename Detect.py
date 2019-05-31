@@ -12,7 +12,7 @@ def yesResponses(response):
 
 def convoStarters():
     questions = ["How are you?", "What did you do today?", "Tell me sssomething about you.", "How wassss your day?", "What are you doing?"]
-    print questions[random.randint(1, len(questions)]
+    print questions[random.randint(1, len(questions))]
 
 def nonResponses():
         responses = ["Hmmm", "Tell me more", "Oh?", "Jussst like a bull in a china ssshop...\n...or maybe a ssssnake",
