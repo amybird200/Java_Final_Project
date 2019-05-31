@@ -2,13 +2,17 @@
 import random
 
 def smallTalk():
+
     count = 0
-    print "How wassssss your day?"
+    print "Tell me something."
     while count <= 5:
         statement = raw_input("> ").lower()
 
-        if "good" in statement:
-            print "Exsssssscelent... What did you do"
+        while "bye" not in statement:
+            if "good" in statement:
+                print "Exsssssscelent... What did you do?"
+
+            if ""
 
 
 def nonResponses():

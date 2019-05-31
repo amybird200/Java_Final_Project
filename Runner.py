@@ -19,8 +19,6 @@ while "bye" not in question:
             statement = raw_input("> ").lower()
             if Detect.yesResponses(statement):
                 MainSelect.select()
-            else:
-                print "Okay, I'll ssssee you later then."
         elif "bad" in statement.lower() or "not" in statement.lower() or "meh" in statement.lower():
             print "Oh no, can I make your day better?"
             confirm = raw_input("> ")

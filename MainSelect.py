@@ -9,7 +9,7 @@ def select():
     print "Would you like to talk about your family?"
     confirm = raw_input("> ")
 
-    if Detect.yesResponses(confirm):  #"yes" in confirm.lower() or "y" in confirm.lower():
+    if Detect.yesResponses(confirm):
         Josie.family()
     print "Would you like to talk about the weather?"
     confirm = raw_input("> ")
