@@ -1,5 +1,6 @@
 
 import MainSelect
+import Detect
 
 def hobbies(): #gives responses to different hobby types, including sports and the arts
     count = 0
@@ -224,7 +225,7 @@ def snakefacts(): #user puts in a number from 1-20 and Snakebot gives out a snak
             print "Put in another integer from 1 - 20 for another ssssplendid sssssnake fact."
     print "Do you want to talk about ssssnakes more? (yes/no)" #asks if user wants to continue talking about snake facts after 5 sentences
     statement2 = raw_input("> ").lower()
-    if "yes" in statement2 or "y" in statement2:
+    if Detect.yesResponses(statement2):
         snakefacts()
     else:
         print "Okay, let'ssss talk about something elsssse."

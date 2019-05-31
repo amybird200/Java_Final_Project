@@ -1,6 +1,7 @@
 
 import MainSelect
 import Detect
+import Ravisha
 
 print "Hello I am Sssssnake bot, I like to chat with humanssss."
 print "Assssk me a question or make a sssstatement."
@@ -26,9 +27,9 @@ while "bye" not in question:
 
                 MainSelect.select()
             else:
-                print "Whelp :(" #smallTalk
+                Ravisha.smallTalk()
     else:
-        print "I do not understand that Englissssh"
+        Detect.nonResponses()
         print "Assssk me a question or make a sssstatement. Or ssssay goodbye to exit."
 
     question = raw_input("> ")

@@ -29,6 +29,16 @@ def smallTalk():
         else:
             Detect.nonResponses()
 
+    print "Do you want to keep talking?"
+    if Detect.yesResponses(statement):
+        count = 0
+        smallTalk()
+    else:
+        "Okay. Letsssss try ssssomething elsssse."
+        MainSelect.select()
+
+
+
 
 
 
