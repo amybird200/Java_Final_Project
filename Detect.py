@@ -20,7 +20,7 @@ def nonResponses():
                      "A fool'ssssss paradisssssse",
                      "There'ssss a frog in my throat... Yum", "I did not underssstand",
                      "A leopard doesssn't change itssss sspotssss... but a ssssnake sssshedsss itsss ssscalesss", "That'ssss a you problem...", "Ssssoundsss rough.",
-                     "Perhaps...", "Are you ssssure?"
+                     "Perhapsssss...", "Are you ssssure?"
                      ]
         ind = random.randint(1, len(responses))
         print responses[ind]
